@@ -45,6 +45,7 @@ $blue: #2E3192;
 //fonts 
 $sohneRegular: sans-serif;
 $sohneBold: sans-serif;
+$tiempos: serif;
 
 // easings
 $easing: cubic-bezier(0.83, 0, 0.17, 1);
@@ -171,7 +172,8 @@ p,
 li,
 a,
 small,
-address {
+address,
+.p {
     margin: 0;
     padding: 0;
     font-size: 170%;
@@ -201,74 +203,83 @@ p.small {
 
 // ————————————————————————————— headings
 
-h1,
-h2 {
-    font-size: 360%;
-    font-weight: 400;
+.h1 {
+    font-family: $tiempos; 
+    font-size: 820%;
+    line-height: 96%;
+    color: $purple;
+}
+
+.h2 {
+    font-family: $tiempos; 
+    font-size: 510%;
+    line-height: 120%;
+    color: $blue;
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
-h3 {
-    font-size: 270%;
+.h3 {
+    font-family: $sohneBold;
+    font-size: 300%;
     margin-bottom: 10px;
     margin-top: 40px;
 }
 
-h4 {
-    font-size: 200%;
-    margin-top: 20px;
-    margin-bottom: 2px;
+.h4 {
+    font-family: $sohneBold;
+    font-size: 220%;
+    line-height: 120%;
+    margin-top: 25px;
+    margin-bottom: 5px;
 }
 
-.h5 {
+.h5,
+.h6 {
     font-family: $sohneBold;
     font-size: 200%;
     line-height: 150%;
 }
 
-h6 {
-    font-size: 300%;
-    margin-bottom: 32px;
-}
-
 // ————————————————————————————— lists
 
-ul {
-    list-style-type: disc;
-}
-
-ul ul {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    list-style-type: circle;
-}
-
-ul ul ul {
-    list-style-type: square;
-}
-
-ol {
-    list-style-type: decimal;
-}
-
-ol ol {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    list-style-type: lower-alpha;
-}
-
-ol ol ol {
-    list-style-type: lower-roman;
-}
-
-ol ol,
-ul ol {
-    list-style-type: lower-roman;
-}
-
-li li {
-    font-size: 100%;
+div {
+    ul {
+        list-style-type: disc;
+    }
+    
+    ul ul {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        list-style-type: circle;
+    }
+    
+    ul ul ul {
+        list-style-type: square;
+    }
+    
+    ol {
+        list-style-type: decimal;
+    }
+    
+    ol ol {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        list-style-type: lower-alpha;
+    }
+    
+    ol ol ol {
+        list-style-type: lower-roman;
+    }
+    
+    ol ol,
+    ul ol {
+        list-style-type: lower-roman;
+    }
+    
+    li li {
+        font-size: 100%;
+    }
 }
 
 iframe {
@@ -285,12 +296,28 @@ iframe {
 // —————————————————————————————————————————
 
 .button {
-    margin-top: 10px;
     display: inline-block;
-    padding: 15px 30px;
+    font-family: $sohneBold;
+    color: white;
+    font-size: 170%;
+    background-color: $purple;
+    padding: 10px 18px 11px;
     text-decoration: none !important;
     line-height: 1;
-    &:hover {}
+
+    &:hover {
+        background-color: $pink;
+    }
+}
+
+.link {
+    font-family: $sohneBold;
+    color: $blue;
+    font-size: 170%;
+    line-height: 1;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 4px;
 }
 
 
@@ -374,6 +401,165 @@ iframe {
     }
 }
 
+// ————————————————————————————————————————— 
+// layers & sections
+// —————————————————————————————————————————
+.section-heading {
+    h2 {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: #2E3192;
+            height: 10px;
+            width: 10px;
+            left: -3vw;
+            top: -1vw;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            border-top: 2px solid $magenta;
+            border-left: 2px solid $magenta;
+            height: 80px;
+            width: 80px;
+            left: calc(-3vw - 70px);
+            top: calc(-1vw - 70px);
+        }
+    }
+}
+
+.stats {
+    > div {
+        position: relative;
+        margin-left: 5vw;
+        display: grid; 
+        grid-template-columns: 0.5fr 1.5fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "icon num"
+          "blurb blurb"; 
+
+        img {
+            grid-area: icon;
+        }
+
+        h3 {
+            grid-area: num;
+        }
+
+        p {
+            grid-area: blurb;
+            margin-top: 30px;
+            color: $blue;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: #2E3192;
+            height: 10px;
+            width: 10px;
+            left: -5vw;
+        }
+    }
+}
+
+.property {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "image image"
+        "name link"
+        "cat cat";
+    margin-bottom: 30px;
+    
+    img {
+        grid-area: image;
+    }
+
+    h3 {
+        grid-area: name;
+    }
+
+    h4 {
+        grid-area: cat;
+    }
+
+    .link {
+        grid-area: link;
+        margin-top: 31px;
+        justify-self: end;
+    }
+}
+
+.cta {
+    img {
+        height: clamp(300px, 75vh, 600px);
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .cta__content {
+        background-color: $grey;
+        padding: 60px;
+        display: grid;
+        grid-template-columns: 1.5fr 0.5fr;
+        grid-template-rows: auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            "h but"
+            "blurb blurb";
+        margin-top: clamp(-280px, -65vh, -520px);
+        position: relative;
+
+        h2 {
+            color: $black;
+            grid-area: h;
+            align-self: center;
+            margin: 0;
+        }
+
+        .button {
+            grid-area: but;
+            align-self: center;
+            justify-self: end;
+        }
+
+        p {
+            grid-area: blurb;
+            margin-top: 30px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            border-top: 10px solid $blue;
+            border-left: 10px solid $blue;
+            height: 80px;
+            width: 80px;
+            top: -10px;
+            left: -10px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            border-top: 10px solid $blue;
+            border-right: 10px solid $blue;
+            height: 80px;
+            width: 80px;
+            top: -10px;
+            right: -10px;
+        }
+    }
+}
+
 
 // ————————————————————————————————————————— 
 // footer
@@ -392,11 +578,6 @@ iframe {
     .main-footer__small {
         align-self: end;
     }
-
-    // .main-footer__spacer {
-    //     height: 100px;
-    //     width: 100%;
-    // }
 
     .main-footer__nav {
         display: flex;
