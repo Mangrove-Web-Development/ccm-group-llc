@@ -560,51 +560,14 @@ iframe {
     }
 }
 
-.ft-partners {
-    .ft-partners__partner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 0px 0px;
-        grid-template-areas:
-            "image image"
-            "logo link"
-            "blurb blurb";
-
-        .ft-partners__partner__ft-image {
-            grid-area: image;
-            margin-bottom: 30px;
-        }
-
-        .ft-partners__partner__logo {
-            grid-area: logo;
-        }
-
-        p {
-            grid-area: blurb;
-            margin-top: 20px;
-        }
-
-        .link {
-            grid-area: link;
-            align-self: start;
-            justify-self: end;
-        }
-    }
-}
-
 .partners {
     .partners__logos {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
 
         img {
-            height: clamp(50px, 10vw, 300px);
-            width: clamp(50px, 14vw, 300px);
-            object-fit: contain;
-            margin: 0 30px;
+            height: clamp(50px, 10vw, 200px);
+            width: clamp(50px, 10vw, 200px);
         }
     }
 }

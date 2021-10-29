@@ -560,7 +560,7 @@ iframe {
     }
 }
 
-.ft-partners {
+.ft-plartners {
     .ft-partners__partner {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -573,7 +573,6 @@ iframe {
 
         .ft-partners__partner__ft-image {
             grid-area: image;
-            margin-bottom: 30px;
         }
 
         .ft-partners__partner__logo {
@@ -582,13 +581,10 @@ iframe {
 
         p {
             grid-area: blurb;
-            margin-top: 20px;
         }
 
         .link {
             grid-area: link;
-            align-self: start;
-            justify-self: end;
         }
     }
 }
