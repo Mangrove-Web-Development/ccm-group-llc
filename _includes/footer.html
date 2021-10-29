@@ -1,10 +1,6 @@
 <footer id="mainFooter" class="main-footer wo-full">
     <div class="main-footer__logo col-1-to-5 m-col-1-to-3 s-col-1-to-5">
-        <img class="editable" src="{{ site.url }}/assets/images/logo.svg" alt="" />
-    </div>
-
-    <div class="main-footer__newsletter col-5-to-13 m-col-3-to-9 s-col-1-to-5">
-        <h2 class="h3 editable">Sign up for our newsletter.</h2>
+        <img class="editable" src="{{ site.url }}/assets/_images/ccm-logo-white.svg" alt="CCM Group LLC Logo" />
     </div>
 
     <nav id="footerNav" class="main-footer__nav col-5-to-13 m-col-2-to-9 s-col-1-to-5">
@@ -16,9 +12,7 @@
     </nav>
 
     <div class="main-footer__small col-5-to-13 m-col-1-to-9 s-col-1-to-5">
-        <small class="editable">© 2021</small>  |  
-        <a class="editable" href="/privacy/">Privacy</a>  |  
-        <a class="editable" href="/accessibility/">Accessibility</a>
+        <small class="editable">© Copyright {{ "now" | date: "%Y" }} {{ site.data.site_info.copyright }}</small>  
     </div>
 </footer>
 </body>

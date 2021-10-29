@@ -48,35 +48,30 @@
 <body id="bodyID" data-barba="wrapper" class="page-{{ pageURLsplit }}">
     <a id="skipLink" href="#skipNavigation">Skip Navigation</a>
     <header id="mainHeader" class="main-header wo">
-        <div class="main-header__logo-area">
+        <div class="main-header__logo-area col-1-to-4">
             <a href="/">
-                <img src="/images/image.jpg" alt="Logo" />
+                <img src="/assets/_images/ccm-logo.svg" alt="CCM Group LLC Logo" />
             </a>
         </div>
-        <nav id="mainNav" class="main-header__nav col-1-to-13 m-col-1-to-13 s-col-1-to-5">  
-            <a class="main-header__nav__icon" href="{{ site.url }}">
-                <img class="editable" src="{{ site.url }}/assets/images/inspiration-logo-icon.svg" alt="Inspiration Logo">
-            </a>
+        <nav id="mainNav" class="main-header__nav col-4-to-13 m-col-1-to-10 s-col-1-to-5">  
             <button id="navToggle" class="nav-toggle strip" aria-expanded="false" aria-controls="mainNav">
-                <img class="nav-toggle__open" src="{{ site.url }}/assets/images/mobile-nav-open.svg" alt="Open Navigation">
-                <img class="nav-toggle__close" src="{{ site.url }}/assets/images/mobile-nav-close.svg" alt="Close Navigation">
+                <img class="nav-toggle__open" src="{{ site.url }}/assets/_images/mobile-nav-open.svg" alt="Open Navigation">
+                <img class="nav-toggle__close" src="{{ site.url }}/assets/_images/mobile-nav-close.svg" alt="Close Navigation">
             </button>
-            <div>
-                <ul>  
-                {% for navItem in site.data.navigation %}
-                    <li {% if navItem.submenu != null %}class="main-header__nav__has-children" aria-haspopup="true" aria-expanded="false"{% endif %}>
-                        <a class="main-header__nav__link{% if pagePermalink == navItem.url %} active{% endif %}" href="{{ navItem.url }}">{{ navItem.title }}</a>
-                        {% if navItem.submenu != null %}
-                        <ul>
-                            {% for subItem in navItem.submenu %}
-                            <li><a class="main-header__nav__link{% if pagePermalink == subItem.url %} active{% endif %}" href="{{ subItem.url }}">{{ subItem.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-                </ul>
-            </div>
+            <ul>  
+            {% for navItem in site.data.navigation %}
+                <li {% if navItem.submenu != null %}class="main-header__nav__has-children" aria-haspopup="true" aria-expanded="false"{% endif %}>
+                    <a class="main-header__nav__link{% if pagePermalink == navItem.url %} active{% endif %}" href="{{ navItem.url }}">{{ navItem.title }}</a>
+                    {% if navItem.submenu != null %}
+                    <ul>
+                        {% for subItem in navItem.submenu %}
+                        <li><a class="main-header__nav__link{% if pagePermalink == subItem.url %} active{% endif %}" href="{{ subItem.url }}">{{ subItem.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
         </nav>
     </header>
     <div id="skipNavigation"></div>

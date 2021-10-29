@@ -1,4 +1,92 @@
 @media only screen and (min-width: 1200px) {
+    .main-header {
+        overflow: visible;
+
+        .main-header__nav {
+
+            > ul {
+                display: flex;
+                justify-content: flex-end;
+
+                > li {
+                    padding: 3px 24px 20px 24px;
+                    position: relative;
+
+                    a {
+                        font-family: $sohneBold;
+                        font-size: 180%;
+                        color: $blue;
+                        line-height: 1.2;
+                    }
+
+                    > ul {
+                        display: none;
+                        position: absolute;
+                        z-index: 1234;
+                        height: 140px;
+                        width: 215px;
+                        background-color: white;
+                        left: 0;
+                        padding: 16px;
+                        margin-top: 20px;
+
+                        &:before {
+                            content: '';
+                            border-top: 2px solid $blue;
+                            border-left: 2px solid $blue;
+                            width: 80px;
+                            height: 80px;
+                            display: block;
+                            position: absolute;
+                            top: -2px;
+                            left: -2px;
+                        }
+
+                        li {
+                            padding-bottom: 13px;
+
+                            a {
+                                position: relative; 
+
+                                &:after {
+                                    content: '';
+                                    display: none;
+                                    position: absolute;
+                                    background-color: $blue;
+                                    height: 8px;
+                                    width: 8px;
+                                    right: -16px;
+                                    top: 6px;
+                                }
+
+                                &:hover:after {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover > ul,
+                    &:focus-within > ul {
+                        display: block;
+                    }
+
+                    &.main-header__nav__has-children:after {
+                        content: '+';
+                        font-family: $sohneBold;
+                        font-size: 180%;
+                        color: $blue;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+
+        #navToggle {
+            display: none;
+        }
+    }
+
 
 }
 

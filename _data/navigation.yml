@@ -1,27 +1,29 @@
 - title: About
   url: /about/
   submenu:
-    - title: Who we are
-      url: /about/who-we-are/
-    - title: Careers
-      url: /careers/
-- title: Solutions
-  url: /solutions/
+    - title: Values and principles
+      url: /about/values-principles/
+    - title: History
+      url: /about/history/
+- title: Investment
+  url: /investment/
   submenu:
-    - title: Fleets
-      url: /solutions/fleets/
-    - title: Charging & Energy
-      url: /solutions/charging-and-energy/
-- title: Resources
-  url: /resources/
+    - title: Properties
+      url: /investment/properties/
+    - title: Partners
+      url: /investment/partners/
+    - title: Investment criteria
+      url: /investment/criteria/
+- title: Divisions
+  url: /divisions/
   submenu:
-    - title: Whitepapers
-      url: /resources/whitepapers/
-    - title: Reports
-      url: /resources/reports/
-    - title: Tools
-      url: /resources/tools/
-- title: News
-  url: /news/
+    - title: CCM Real Estate
+      url: /divisions/CCM-real-estate/
+    - title: CSE CCM Realty Investments
+      url: /divisions/CSE-CCM-realty-investments/
+    - title: CCM Puerto Rico
+      url: /divisions/CCM-puerto-rico/
+- title: Impact
+  url: /impact/
 - title: Contact
   url: /contact/

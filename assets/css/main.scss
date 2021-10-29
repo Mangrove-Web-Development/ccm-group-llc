@@ -9,11 +9,11 @@
 // VARIABLES: for partials
 // ————————————————————————————————————————— 
 // for layout
-$column-count: 10; 
-$column-count-m: 7;
+$column-count: 12; 
+$column-count-m: 8;
 $column-count-s: 4;
 $grid-width: 1920; 
-$column-margin: 20;
+$column-margin: 30;
 
 // ————————————————————————————————————————— 
 // IMPORTS 
@@ -32,8 +32,19 @@ $headerheight: 80px;
 $fullbrowserheight: calc(100vh - 80px);
 
 // color
-$black: #000;
+$black: #231F20;
 $white: #FBF9F2;
+$ccmwhite: #F3F1F2;
+$grey: #E7E4E5;
+$pink: #C6168D;
+$magenta: #A3238E;
+$purple: #812990;
+$indigo: #5C2D91;
+$blue: #2E3192;
+
+//fonts 
+$sohneBold: sans-serif;
+
 
 // easings
 $easing: cubic-bezier(0.83, 0, 0.17, 1);
@@ -60,15 +71,15 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
 // S T A T E S
 // ————————————————————————————————————————— 
 ::selection {
-    background:rgba(252, 67, 54, 0.5);
+    background: $pink;
 }
 
 ::-moz-selection {
-    background: rgba(252, 67, 54, 0.5);
+    background: $pink;
 }
 
 .keyboard-focus :focus {
-    outline: 2px solid blue;
+    outline: 4px solid blue;
 }
 
 // skip link defaults
@@ -93,7 +104,6 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
 // ————————————————————————————————————————— 
 // core styles & classes
 // ————————————————————————————————————————— 
-
 body,
 input,
 textarea,
@@ -105,6 +115,10 @@ checkbox,
     font-style: normal;
     line-height: 1;
     text-align: left;
+}
+
+body {
+    background-color: $ccmwhite; 
 }
 
 .pv {
