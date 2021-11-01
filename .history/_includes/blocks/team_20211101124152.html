@@ -3,15 +3,15 @@
         {{ include.block.heading }}
         Team
     </h2>
-    <div class="team__container col-1-to-12 m-col-1-to-9 s-col-1-to-5">
+    <div class="team__container col-1-to-12 m-col-1-to-9 s-col-1-to-5 flex-wo">
         <div class="team__container__team__member">
             <img src="/assets/_images/chuttersnap-eXtKryPRVC8-unsplash.jpg" alt="Image alt">
-            <h3 class="h4">{{ teamMember.name }}Firstname Lastname</h3>
-            <h4 class="h5">{{ teamMember.job_title }}Title, Division</h4>
+            <h3>{{ teamMember.name }}Firstname Lastname</h3>
+            <h4>{{ teamMember.job_title }}Title, Division</h4>
             <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet cura non eleifend purus nunc pharetra.
             </p>
-            <a class="link" href="">
+            <a href="">
                 Read more
                 <span class="sr-only">About {{teamMember.name}} </span>
             </a>

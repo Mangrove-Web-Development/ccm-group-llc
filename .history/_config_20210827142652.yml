@@ -29,7 +29,7 @@ _comments:
 
 # Collections (Custom Post Types)
 collections:
-  sections:
+  general_pages:
     output: true
     _hide_content: true
     permalink: /:name

@@ -43,9 +43,9 @@ $indigo: #5C2D91;
 $blue: #2E3192;
 
 //fonts 
-$sohneRegular: 'Test Söhne', sans-serif;
-$sohneBold: 'Test Söhne Kräftig', sans-serif;
-$tiempos: 'Tiempos Headline Test Light', serif;
+$sohneRegular: sans-serif;
+$sohneBold: sans-serif;
+$tiempos: serif;
 
 // easings
 $easing: cubic-bezier(0.83, 0, 0.17, 1);
@@ -181,11 +181,6 @@ address,
     line-height: 150%;
 }
 
-p,
-.p {
-    padding-top: 20px;
-}
-
 p a {
     font-size: 100%;
 }
@@ -215,17 +210,15 @@ p.small {
     color: $purple;
 }
 
-.general-content h2,
 .h2 {
     font-family: $tiempos; 
     font-size: 510%;
     line-height: 120%;
     color: $blue;
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
-.general-content h3,
 .h3 {
     font-family: $sohneBold;
     font-size: 300%;
@@ -233,7 +226,6 @@ p.small {
     margin-top: 40px;
 }
 
-.general-content h4,
 .h4 {
     font-family: $sohneBold;
     font-size: 220%;
@@ -242,8 +234,6 @@ p.small {
     margin-bottom: 5px;
 }
 
-.general-content h5, 
-.general-content h6,
 .h5,
 .h6 {
     font-family: $sohneBold;
@@ -266,15 +256,6 @@ div {
     
     ul ul ul {
         list-style-type: square;
-    }
-
-    ul, 
-    ol {
-        padding: 8px 35px; 
-
-        li {
-            margin: 5px 0;
-        }
     }
     
     ol {

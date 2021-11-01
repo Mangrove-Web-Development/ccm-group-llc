@@ -1,0 +1,39 @@
+{% include head.html %}
+
+<div data-barba="container" data-barba-namespace="section">
+    <header class="wo pv section-layout-header">
+        <h1 class="h1 col-2-to-9">Section Page Layout</h1>
+        <p class="col-2-to-9">
+            Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Donec odio. Quisque volutpat.
+        </p>
+    </header>
+    
+    <main>
+    
+        {% include /blocks/intro.html %}
+
+        {% include /blocks/full-w-image.html %}
+    
+        {% for block in page.page_blocks %}
+        {% case block._id %}
+            {% when 'general_content' %}
+                {% include /blocks/general-content.html block=block %}
+    
+            {% when 'full_w_image' %}
+                {% include /blocks/full-w-image.html block=block %}
+    
+            {% when 'youtube_embed' %}
+                {% include /blocks/youtube-embed.html block=block %}
+    
+            {% when 'team' %}
+                {% include /blocks/team.html block=block %}
+    
+            {% else %}
+            <!-- else -->
+        {% endcase %}
+        {% endfor %}
+    
+    </main>
+</div>
+
+{% include footer.html %}

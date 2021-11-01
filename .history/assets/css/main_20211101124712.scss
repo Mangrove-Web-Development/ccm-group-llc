@@ -183,7 +183,7 @@ address,
 
 p,
 .p {
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 p a {
@@ -222,7 +222,7 @@ p.small {
     line-height: 120%;
     color: $blue;
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 .general-content h3,
@@ -266,15 +266,6 @@ div {
     
     ul ul ul {
         list-style-type: square;
-    }
-
-    ul, 
-    ol {
-        padding: 8px 35px; 
-
-        li {
-            margin: 5px 0;
-        }
     }
     
     ol {
