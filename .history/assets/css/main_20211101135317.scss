@@ -127,11 +127,6 @@ body {
     padding-bottom: 125px;
 }
 
-.pv-small {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 .pv-med {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -520,10 +515,6 @@ iframe {
         grid-area: cat;
     }
 
-    .p {
-        padding-top: 0;
-    }
-
     .link {
         grid-area: link;
         margin-top: 31px;
@@ -670,16 +661,6 @@ iframe {
             float: right;
             margin-top: 20px;
         }
-    }
-}
-
-.property-section {
-
-    h2.h3,
-    .lg-p {
-        padding: 0;
-        align-self: end;
-        margin-bottom: 10px;
     }
 }
 
