@@ -744,18 +744,10 @@ iframe {
     }
 }
 
-.map-text {
-    .general-content {
-        align-self: center;
-    }
-
-    .map-text__map #map {
-        width: 30vw !important;
-        height: 25vw !important;
-    }
+.map-text__map #map {
+    width: 30vw;
+    height: 25vw;
 }
-
-
 
 // ————————————————————————————————————————— 
 // footer
