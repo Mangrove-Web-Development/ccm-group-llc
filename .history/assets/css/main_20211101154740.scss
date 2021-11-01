@@ -700,9 +700,7 @@ iframe {
     position: relative; 
 
     > img {
-        height: clamp(300px, 50vh, 650px);
-        width: 100%;
-        object-fit: cover;
+        min-height: 40vh;
     }
     
     .property-intro__content {
@@ -712,18 +710,16 @@ iframe {
         padding: 60px;
         position: absolute;
         right: -20px;
-        height: clamp(450px, 65vh, 800px);
+        min-height: 60vh;
 
         &:before {
             content: '';
             display: block;
             position: absolute;
             background: $blue;
-            height: clamp(250px, 40vh, 600px);
+            height: 80%;
             width: 10px;
             left: -10px;
-            top: 50%;
-            transform: translateY(-50%);
         }
 
         h2.h3 {
@@ -732,14 +728,10 @@ iframe {
 
         dt,
         dd {
-            width: calc(50% - 10px);
+            width: calc(50% - 20px);
             display: inline-block;
             margin: 10px 0;
             padding: 0;
-        }
-
-        dt {
-            margin-right: 17px;
         }
     }
 }
