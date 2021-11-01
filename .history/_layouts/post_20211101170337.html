@@ -1,0 +1,22 @@
+{% include head.html %}
+
+<div data-barba="container" data-barba-namespace="page">
+    <header class="wo pv-med page-header">
+        <h1 class="h1 col-2-to-9">Page Name</h1>
+        <p class="col-2-to-9">
+            Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Donec odio. Quisque volutpat.
+        </p>
+    </header>
+    
+    <main>
+
+        {% include /blocks/general-content.html %}
+
+        {% include /blocks/image-sidebar.html %}
+
+        {% include /blocks/general-content.html %}
+
+    </main>
+</div>
+
+{% include footer.html %}

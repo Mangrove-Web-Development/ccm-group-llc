@@ -690,7 +690,6 @@ iframe {
     }
 }
 
-.full-w-map,
 .full-w-image {
     p {
         padding: 0;
@@ -758,8 +757,9 @@ iframe {
 
 .full-w-map {
     #map {
-        width: 100% !important;
-        height: clamp(300px, 70vh, 1000px) !important;
+        height: clamp(300px, 70vh, 1000px);
+        width: 100%;
+        height: 100%;
         display: block;
     }
 }
