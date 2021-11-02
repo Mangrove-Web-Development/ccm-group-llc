@@ -742,79 +742,61 @@ iframe {
     }
 }
 
-// ————————————————————————————————————————— 
-// history page
-// —————————————————————————————————————————
+.history-entry {
 
-.history {
-    position: relative;
-
-    .history-line {
-        position: absolute;
-        height: 100%;
-        width: 2px;
-        background-color: $pink;
-        z-index: -1;
-        left: calc(50% - 1px);
+    &.history-entry--left {
+        .history-entry__image {
+            margin-top: 80px;
+        }
     }
-    
-    .history-entry {
-        &.history-entry--left {
-            .history-entry__image {
-                margin-top: 80px;
-            }
-        }
-    
-        &.history-entry--right {
-            direction: rtl;
-    
-            .history-entry__content {
-                margin-top: 80px;
-            }
-        }
-    
-        .history-entry__image img {
-            height: clamp(300px, 47vh, 500px);
-            width: 100%;
-            object-fit: cover;
-        }
-    
+
+    &.history-entry--right {
+        direction: rtl;
+
         .history-entry__content {
-            position: relative;
-            background-color: $grey;
-            padding: 70px 40px;
-    
-            h2 {
-                color: $black;
-            }
-    
-            &:before {
-                content: '';
-                position: absolute;
-                border-top: 10px solid $blue;
-                border-left: 10px solid $blue;
-                height: 80px;
-                width: 80px;
-                top: -10px;
-                left: -10px;
-            }
-    
-            &:after {
-                content: '';
-                position: absolute;
-                border-bottom: 10px solid $blue;
-                border-right: 10px solid $blue;
-                height: 80px;
-                width: 80px;
-                bottom: -10px;
-                right: -10px;
-            }
-    
+            margin-top: 80px;
         }
+    }
+
+    .history-entry__image img {
+        height: clamp(300px, 50vh, 500px);
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .history-entry__content {
+        position: relative;
+        background-color: $grey;
+        padding: 70px 40px;
+
+        h2 {
+            color: $black;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            border-top: 10px solid $blue;
+            border-left: 10px solid $blue;
+            height: 80px;
+            width: 80px;
+            top: -10px;
+            left: -10px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            border-bottom: 10px solid $blue;
+            border-right: 10px solid $blue;
+            height: 80px;
+            width: 80px;
+            bottom: -10px;
+            right: -10px;
+        }
+
     }
 }
-
-
 
 
 
