@@ -37,11 +37,18 @@ collections:
   properties:
     output: true
     _hide_content: true
-    permalink: /investment/properties/:name 
+    permalink: /:name 
   general_pages:
     output: true
     _hide_content: true
-    permalink: /:name
+    permalink: /:name 
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
