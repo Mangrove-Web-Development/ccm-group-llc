@@ -1,6 +1,6 @@
 <footer id="mainFooter" class="main-footer wo-full">
     <div class="main-footer__logo col-1-to-5 m-col-1-to-3 s-col-1-to-5">
-        <img class="editable" src="{{ site.url }}/assets/_images/ccm-logo-white.svg" alt="CCM Group LLC Logo" />
+        <img class="editable" src="/assets/_images/ccm-logo-white.svg" alt="CCM Group LLC Logo" />
     </div>
 
     <nav aria-label="Social Media" class="main-footer__nav col-8-to-10 m-col-2-to-9 s-col-1-to-5">
@@ -18,10 +18,10 @@
     <div class="main-footer__spacer"></div>
 
     <div class="main-footer__small col-1-to-8 m-col-1-to-9 s-col-1-to-5">
-        <small class="editable">© Copyright {{ "now" | date: "%Y" }} {{ site.data.site_info.copyright }}</small>  
+        <small class="editable">© Copyright 2021 CCM Group LLC</small>  
     </div>
 
-    <nav id="footerNav" aria=label="Footer Links" class="main-footer__nav col-8-to-10 m-col-2-to-9 s-col-1-to-5">
+    <nav id="footerNav" aria=label="Footer links" class="main-footer__nav col-8-to-10 m-col-2-to-9 s-col-1-to-5">
     {% for footerNavItem in site.data.footer_navigation %}
         <a class="main-header__nav__link{% if pagePermalink == footerNavItem.url %} active{% endif %}" href="{{ navItem.url }}">
             {{ footerNavItem.title }}
@@ -38,6 +38,3 @@
     <span class="main-footer__stripe-2"></span>
     <span class="main-footer__stripe-1"></span>
 </footer>
-
-</body>
-</html>
