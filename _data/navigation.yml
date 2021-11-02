@@ -6,24 +6,24 @@
     - title: History
       url: /about/history
 - title: Investment
-  url: /investment/
+  url: /investment
   submenu:
     - title: Properties
-      url: /investment/properties/
+      url: /investment/properties
     - title: Partners
-      url: /investment/partners/
+      url: /investment/partners
     - title: Investment criteria
-      url: /investment/criteria/
+      url: /investment/criteria
 - title: Divisions
-  url: /divisions/
+  url: /divisions
   submenu:
     - title: CCM Real Estate
-      url: /divisions/CCM-real-estate/
+      url: /divisions/CCM-real-estate
     - title: CSE CCM Realty Investments
-      url: /divisions/CSE-CCM-realty-investments/
+      url: /divisions/CSE-CCM-realty-investments
     - title: CCM Puerto Rico
-      url: /divisions/CCM-puerto-rico/
+      url: /divisions/CCM-puerto-rico
 - title: Impact
-  url: /impact/
+  url: /impact
 - title: Contact
-  url: /contact/
+  url: /contact
