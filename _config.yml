@@ -12,7 +12,7 @@ sass:
   style: expanded
 collections_dir: collections
 include: ["/_images"]
-google_maps_javascript_api_key: AIzaSyCuMuGciC-_-y21ahWvStkbREj0x6-s-MU
+google_maps_javascript_api_key: AIzaSyB-f8eAfO4Eu6qw_BipqOV_L24YF6nHohk
 
 # CloudCannon Options
 _options:
