@@ -19,9 +19,8 @@
                         font-size: 180%;
                         color: $blue;
                         line-height: 1.2;
-                        transition: all .15s $easing;
+                        transition: all .2s $easing;
 
-                        &.active,
                         &:hover {
                             color: $pink;
                         }
@@ -31,6 +30,7 @@
                         display: none;
                         position: absolute;
                         z-index: 1234;
+                        height: 140px;
                         width: 215px;
                         background-color: white;
                         left: 0;
@@ -57,19 +57,17 @@
 
                                 &:after {
                                     content: '';
-                                    display: block;
-                                    opacity: 0;
+                                    display: none;
                                     position: absolute;
                                     background-color: $blue;
                                     height: 8px;
                                     width: 8px;
                                     right: -16px;
-                                    top: 9px;
-                                    transition: all .2s $easing;
+                                    top: 6px;
                                 }
 
                                 &:hover:after {
-                                    opacity: 1;
+                                    display: block;
                                 }
                             }
                         }

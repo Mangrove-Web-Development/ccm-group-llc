@@ -65,7 +65,7 @@
                     {% if navItem.submenu != null %}
                     <ul>
                         {% for subItem in navItem.submenu %}
-                        <li><a class="main-header__nav__link{% if page.url == subItem.url %} active{% endif %}" href="{{ subItem.url }}">{{ subItem.title }}</a></li>
+                        <li><a class="main-header__nav__link{% if page.url == subItem.url %} active{% endif %} {{ page.url }}" href="{{ subItem.url }}">{{ subItem.title }}</a></li>
                         {% endfor %}
                     </ul>
                     {% endif %}

@@ -21,7 +21,6 @@
                         line-height: 1.2;
                         transition: all .15s $easing;
 
-                        &.active,
                         &:hover {
                             color: $pink;
                         }
