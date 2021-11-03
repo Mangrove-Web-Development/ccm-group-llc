@@ -797,8 +797,7 @@ iframe {
 
 .history {
     position: relative;
-    margin-bottom: 130px;
-    overflow: hidden;
+    margin-bottom: 60px;
 
     .history-line {
         position: absolute;
@@ -807,7 +806,7 @@ iframe {
         background-color: $pink;
         z-index: -1;
         left: calc(50% - 1px);
-        top: 160px;
+        top: 80px;
     }
 
     .history-entry {

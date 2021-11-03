@@ -802,12 +802,12 @@ iframe {
 
     .history-line {
         position: absolute;
-        height: 100%;
+        height: 120%;
         width: 2px;
         background-color: $pink;
         z-index: -1;
         left: calc(50% - 1px);
-        top: 160px;
+        top: 80px;
     }
 
     .history-entry {
