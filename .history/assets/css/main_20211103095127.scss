@@ -349,7 +349,6 @@ iframe {
     padding: 10px 18px 11px;
     text-decoration: none !important;
     line-height: 1;
-    transition: .2s all $easing;
 
     &:hover {
         background-color: $pink;
@@ -364,12 +363,6 @@ iframe {
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
     text-underline-offset: 4px;
-    transition: .2s all $easing;
-
-    &:hover {
-        color: $pink;
-        text-decoration-color: $magenta;
-    }
 }
 
 

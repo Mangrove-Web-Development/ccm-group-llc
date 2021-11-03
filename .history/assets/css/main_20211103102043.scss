@@ -367,8 +367,8 @@ iframe {
     transition: .2s all $easing;
 
     &:hover {
-        color: $pink;
-        text-decoration-color: $magenta;
+        text-decoration-color: $pink;
+        text-decoration-style: double;
     }
 }
 
