@@ -524,11 +524,11 @@ iframe {
 
         h3 {
             grid-area: num;
-            align-self: center;
         }
 
         p {
             grid-area: blurb;
+            margin-top: 30px;
             color: $blue;
         }
 
