@@ -455,20 +455,20 @@ iframe {
         margin-left: 54px;
     }
 
-    h1 {
-        margin-bottom: 30px;
+    span:nth-of-type(1) {
+        color: $pink;
+    }
 
-        span:nth-of-type(1) {
-            color: $pink;
-        }
-    
-        span:nth-of-type(2) {
-            color: $magenta;
-        }
-    
-        span:nth-of-type(4) {
-            color: $blue;
-        }
+    span:nth-of-type(2) {
+        color: $magenta;
+    }
+
+    span:nth-of-type(3) {
+        color: $pink;
+    }
+
+    span:nth-of-type(4) {
+        color: $blue;
     }
 }
 
@@ -547,14 +547,9 @@ iframe {
         "cat cat";
     margin-bottom: 30px;
 
-    &:not(.ft-properties__property--ft) {
-        img {
-            height: clamp(300px, 30vw, 600px);
-        }
-    }
-
     img {
         grid-area: image;
+        height: clamp(300px, 30vw, 600px);
         width: 100%;
         object-fit: cover;
     }
@@ -632,7 +627,6 @@ iframe {
         .ft-partners__partner__ft-image {
             grid-area: image;
             margin-bottom: 30px;
-            height: clamp(300px, 30vw, 600px);
         }
 
         .ft-partners__partner__logo {

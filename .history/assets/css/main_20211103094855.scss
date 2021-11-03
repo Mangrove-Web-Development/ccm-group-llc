@@ -470,6 +470,8 @@ iframe {
             color: $blue;
         }
     }
+
+
 }
 
 .section-heading {
@@ -547,14 +549,9 @@ iframe {
         "cat cat";
     margin-bottom: 30px;
 
-    &:not(.ft-properties__property--ft) {
-        img {
-            height: clamp(300px, 30vw, 600px);
-        }
-    }
-
     img {
         grid-area: image;
+        height: clamp(300px, 30vw, 600px);
         width: 100%;
         object-fit: cover;
     }
@@ -632,7 +629,6 @@ iframe {
         .ft-partners__partner__ft-image {
             grid-area: image;
             margin-bottom: 30px;
-            height: clamp(300px, 30vw, 600px);
         }
 
         .ft-partners__partner__logo {

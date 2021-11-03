@@ -549,16 +549,12 @@ iframe {
 
     &:not(.ft-properties__property--ft) {
         img {
+            grid-area: image;
             height: clamp(300px, 30vw, 600px);
+            width: 100%;
+            object-fit: cover;
         }
     }
-
-    img {
-        grid-area: image;
-        width: 100%;
-        object-fit: cover;
-    }
-
     h3 {
         grid-area: name;
     }

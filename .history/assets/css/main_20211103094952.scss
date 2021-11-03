@@ -547,14 +547,9 @@ iframe {
         "cat cat";
     margin-bottom: 30px;
 
-    &:not(.ft-properties__property--ft) {
-        img {
-            height: clamp(300px, 30vw, 600px);
-        }
-    }
-
     img {
         grid-area: image;
+        height: clamp(300px, 30vw, 600px);
         width: 100%;
         object-fit: cover;
     }
