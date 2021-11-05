@@ -530,6 +530,7 @@ iframe {
         p {
             grid-area: blurb;
             color: $blue;
+            margin-top: 0;
         }
 
         &:before {
