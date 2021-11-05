@@ -209,7 +209,9 @@ p,
 }
 
 dd,
-.lg-p {
+p.lg-p,
+p.p-lg,
+.p-lg p {
     font-size: 200%;
     font-family: $sohneRegular;
     line-height: 150%;
