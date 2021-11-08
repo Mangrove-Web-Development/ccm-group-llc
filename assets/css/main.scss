@@ -377,7 +377,7 @@ iframe {
     color: white;
     font-size: 170%;
     background-color: $purple;
-    padding: 10px 18px 11px;
+    padding: 10px 18px 12px;
     text-decoration: none !important;
     line-height: 1;
     transition: .2s all $easing;
@@ -400,6 +400,28 @@ iframe {
     &:hover {
         color: $pink;
         text-decoration-color: $magenta;
+    }
+}
+
+#videoControl {
+    height: 44px;
+    width: 44px;
+    position: absolute;
+    border-radius: 100px;
+    border: none;
+    background-color: white;
+    bottom: 30px;
+    transition: all .4s cubic-bezier(0.65, 0, 0.35, 1);
+    left: 30px;
+    background-image: url('/../assets/_images/play-icon.png');
+    cursor: pointer;
+
+    &.pause {
+        background-image: url('/../assets/_images/pause-icon.png');
+    }
+
+    &:hover {
+        transform: scale(1.05);
     }
 }
 

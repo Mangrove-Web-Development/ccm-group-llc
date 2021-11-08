@@ -75,31 +75,25 @@ function is_touch_device() {
 
 
 // —————————————————————————————————————————————————————
-// make bg image square function
+// video controls
 // —————————————————————————————————————————————————————
-// add class "make-square" to elements
-// not tested, may be broken. contact Nikki if broken
-document.addEventListener("DOMContentLoaded", function () {
-    let squim = $('.make-square');
-
-    if (squim) {
-        function squareImage() {
-            let squimWidth = $('.make-square').width();
-            $('.make-square').css("height", squimWidth + 'px');
+function videoControl() {
+    var mediaVideo = $("#heroVideo").get(0);
+    // play/pause on video click
+    $('#videoControl').click(function () {
+        if (mediaVideo.paused) {
+            mediaVideo.play();
+            this.classList.add("pause");
+        } else {
+            mediaVideo.pause();
+            this.classList.remove("pause");
         }
-        // init
-        squareImage();
-        window.addEventListener("resize", squareImage);
-    }
-});
-
-
-
-// Remember to minimize this file before putting into production site
-
-
+    });
+}
 
 document.addEventListener("DOMContentLoaded", function (event) {
+
+    videoControl();
 
     barba.init({
         transitions: [{

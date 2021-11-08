@@ -1,5 +1,8 @@
 ---
 title: Home
+hero_video_path: /uploads/video/ccm-hero-video.m4v
+hero_video_poster_image:
+hero_video_description:
 ---
 
 {% include head.html %}
@@ -16,7 +19,12 @@ title: Home
             <span>Give.</span>
         </h1>
         <div class="home-hero__video col-1-to-13">
-            <img src="/assets/_images/placeholder6.jpg" alt="" />
+            <button id="videoControl" class="pause" aria-label="Pause and Play Video. Ambient, no audio.">
+            </button>
+            <video id="heroVideo" preload="auto" autoplay="" aria-hidden="true" poster="{{ page.hero_video_poster_image}}" loop="" width="2000">
+                <source src="{{ page.hero_video_path }}" type="video/mp4" />
+                <p>{{ page.hero_video_description }}</p>
+            </video>
         </div>
     </section>
 
