@@ -21,31 +21,9 @@ $column-margin: 30;
 @import "layout";
 
 @font-face {
-    font-family: 'Soehne';
+    font-family: 'Soehne Regular';
     src: url('../fonts/soehne-buch.woff2') format('woff2');
     font-display: swap;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Soehne';
-    src: url('../fonts/soehne-buch-kursiv.woff2') format('woff2');
-    font-display: swap;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Soehne Bold';
-    src: url('../fonts/soehne-kraftig.woff2') format('woff2');
-    font-display: swap;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Tiempos';
-    src: url('../fonts/tiempos-headline-light.woff2') format('woff2');
-    font-display: swap;
-    font-style: normal;
 }
 
 
@@ -67,9 +45,12 @@ $indigo: #5C2D91;
 $blue: #2E3192;
 
 //fonts 
-$sohneRegular: 'Soehne', sans-serif;
-$sohneBold: 'Soehne Bold', sans-serif;
-$tiempos: 'Tiempos', serif;
+$sohneRegular: 'Soehne Regular',
+sans-serif;
+$sohneBold: 'Test Söhne Kräftig',
+sans-serif;
+$tiempos: 'Tiempos Headline Test Light',
+serif;
 
 // easings
 $easing: cubic-bezier(0.83, 0, 0.17, 1);
