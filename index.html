@@ -183,8 +183,9 @@ partners:
             </p>
         </div>
         <div class="partners__logos col-7-to-13">
-            <img src="/uploads/partners/chartwell-property-group.png" alt="Chartwell Property Group" />
-            <img src="/uploads/partners/laurel-street.svg" alt="Laurel Street" />
+            {% for partner in page.partners %}
+            <img src="{{ partner.partner_logo_image }}" alt="{{ partner.partner_logo_alt }}" />
+            {% endfor %}
         </div>
     </section>
 
