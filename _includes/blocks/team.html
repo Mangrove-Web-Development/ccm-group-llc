@@ -5,10 +5,11 @@
     </h2>
     <div class="team__container col-2-to-11 m-col-1-to-9 s-col-1-to-5">
         <div class="team__container__team-member">
-            <img src="/assets/_images/portrait-placeholder.jpg" alt="Image alt">
+            <img src="{{ teamMember.image }}/assets/_images/portrait-placeholder.jpg" alt="">
             <h3 class="h4">{{ teamMember.name }}Firstname Lastname</h3>
             <h4 class="p">{{ teamMember.job_title }}Title, Division</h4>
             <p>
+                {{ teamMember.bio_text }}
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet cura non eleifend purus nunc pharetra.
             </p>
             <a class="link" href="">
