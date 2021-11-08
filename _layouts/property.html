@@ -2,41 +2,31 @@
 
 <div data-barba="container" data-barba-namespace="section">
     <header class="wo pv-med page-header">
-        <h1 class="h1 col-2-to-9">Property Name</h1>
+        <h1 class="h1 col-2-to-9">
+            {{ page.title }}
+        </h1>
         <p class="p-lg col-2-to-9">
-            Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Donec odio. Quisque volutpat.
+            {{ page.description }}
         </p>
     </header>
     
     <main>
         <section class="wo pv property-intro">
-            <img class="col-1-to-10" src="/assets/_images/placeholder2.jpg" alt="">
+            <img class="col-1-to-10" src="{{ page.featured_image }}" alt="{{ page.featured_image_alt }}">
             <div class="property-intro__content">
                 <h2 class="h3">Property partner</h2>
-                <img src="/assets/_images/partner-logo.jpg" alt="">
+                <img src="{{ page.partner_logo_image }}" alt="{{ page.partner_logo_alt }}">
                 <h2 class="h3">About the property</h2>
                 <dl>
-                    <dt>Property type</dt>
-                    <dd>Commercial</dd>
-                    <dt>Size</dt>
-                    <dd>47,327 sq ft.</dd>
-                    <dt>Attribute</dt>
-                    <dd>XYZ</dd>
+                {% for about in page.about_property %}
+                    <dt>{{ about.data_title }}</dt>
+                    <dd>{{ about.data }}</dd>
+                {% endfor %}
                 </dl>
             </div>
         </section>
 
-        <section class="map-text wo pv-lg">
-            <div class="general-content col-2-to-6">
-                <h2>Simple text layer, about the property.</h2>
-                <p class="p-lg">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
-                </p>
-            </div>
-            <div class="map-text__map col-7-to-12">
-                {% include google-map.html latitude=-45.8787605 longitude=170.5027976 zoom=5 %}
-            </div>
-        </section>
+        {% include property-location.html %}
 
         {% include /blocks/full-w-image.html %}
     
