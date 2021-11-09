@@ -1,14 +1,15 @@
-@media only screen and (min-width: 1200px) {
+/* Desktop Nav */
+@media only screen and (min-width: 700px) {
     .main-header {
         overflow: visible;
 
         .main-header__nav {
 
-            > ul {
+            >ul {
                 display: flex;
                 justify-content: flex-end;
 
-                > li {
+                >li {
                     padding: 3px 24px 20px 24px;
                     position: relative;
                     font-size: 100%;
@@ -27,7 +28,7 @@
                         }
                     }
 
-                    > ul {
+                    >ul {
                         display: none;
                         position: absolute;
                         z-index: 1234;
@@ -53,7 +54,7 @@
                             padding-bottom: 13px;
 
                             a {
-                                position: relative; 
+                                position: relative;
 
                                 &:after {
                                     content: '';
@@ -75,8 +76,8 @@
                         }
                     }
 
-                    &:hover > ul,
-                    &:focus-within > ul {
+                    &:hover>ul,
+                    &:focus-within>ul {
                         display: block;
                     }
 
@@ -99,21 +100,350 @@
 
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
+/* Mobile Nav */
+@media only screen and (max-width: 700px) {
+    #navToggle {
+        border: none;
+        position: absolute;
+        top: 16px;
+        right: 10px;
+        z-index: 12;
+        height: 44px;
+        width: 44px;
 
-}
+        &[aria-expanded="true"] {
+            .nav-toggle__close {
+                display: block;
+            }
 
-@media only screen and (max-width: 600px) {
-    h1, h2, h3, h4, h5, h6, li, p,
-    .main-header__nav a, a.link, a,
-    input, button, textarea {
-        font-weight: 500 !important;
-        font-size: 180%;
-        line-height: 1.111;
-        letter-spacing: 0px;
+            .nav-toggle__open {
+                display: none;
+            }
+        }
+
+        .nav-toggle__close {
+            display: none;
+        }
     }
 
-    // comment!!!! 
-    // better comment
+    .main-header__nav {
+        li {
+            font-size: 100%;
 
+            .main-header__nav__link {
+                font-family: $sohneBold;
+                font-size: 180%;
+                line-height: 1;
+                color: $blue;
+            }
+        }
+
+        >ul {
+            position: absolute;
+            background: white;
+            height: 100vh;
+            width: 100vw;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 130px 20px 0 20px;
+            z-index: 1;
+            display: none;
+
+            &.is-active {
+                display: block;
+            }
+
+            >li {
+                width: 100%;
+                margin: 30px 0;
+            }
+        }
+
+        .main-header__nav__has-children {
+            display: grid;
+            grid-template-columns: 1fr 1.7fr;
+            grid-template-rows: 1fr;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                width: 60%;
+
+                li a {
+                    display: inline-block;
+                    font-family: $sohneRegular;
+                    font-size: 160%;
+                    line-height: 1.2;
+                    margin-bottom: 10px;
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+    body {
+        font-size: 55%;
+    }
+
+    .pv {
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+
+    .pv-small {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .pv-med {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .pv-lg {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+
+    .home-hero p,
+    .home-hero h1 {
+        margin-left: 0;
+    }
+
+    .main-header .main-header__nav>ul>li {
+        padding: 3px 18px 20px 18px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    // ————————————————————————————————————————— 
+    // core & header/footer
+    // —————————————————————————————————————————
+    .pv {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .pv-med,
+    .pv-small {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .pv-lg {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .main-header__logo-area {
+        position: relative;
+        z-index: 12;
+
+        img {
+            width: 110px;
+        }
+    }
+
+    .main-footer {
+        .main-footer__spacer {
+            display: none;
+        }
+
+        .main-footer__small {
+            order: 7;
+        }
+
+        .main-footer__site-title {
+            display: none;
+        }
+    }
+
+    // ————————————————————————————————————————— 
+    // typography
+    // —————————————————————————————————————————
+    p,
+    li,
+    a,
+    small,
+    address,
+    .p,
+    dd,
+    p.lg-p,
+    p.p-lg,
+    .p-lg p {
+        margin: 0;
+        padding: 0;
+        font-size: 160%;
+        font-family: $sohneRegular;
+        line-height: 150%;
+    }
+
+    small {
+        font-size: 150%;
+    }
+
+    p,
+    .p {
+        padding-top: 12px;
+    }
+
+    b,
+    strong {
+        font-family: $sohneBold;
+    }
+
+    // ————————————————————————————— headings
+
+    .h1 {
+        font-size: 680%;
+        line-height: 120%;
+    }
+
+    .general-content h2,
+    .h2 {
+        font-size: 370%;
+        line-height: 130%;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    .general-content h3,
+    .h3 {
+        font-size: 230%;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        line-height: 120%;
+    }
+
+    .general-content h4,
+    .h4 {
+        font-size: 170%;
+        line-height: 120%;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    dt,
+    .general-content h5,
+    .general-content h6,
+    .h5,
+    .h6 {
+        font-family: $sohneBold;
+        font-size: 160%;
+        line-height: 150%;
+    }
+
+    // ————————————————————————————————————————— 
+    // buttons
+    // —————————————————————————————————————————
+
+    .button {
+        font-size: 160%;
+        padding: 8px 15px 10px;
+    }
+
+    .link {
+        font-size: 160%;
+    }
+
+    .video-control {
+        height: 44px;
+        width: 44px;
+        position: absolute;
+        border-radius: 100px;
+        border: none;
+        background-color: white;
+        bottom: 30px;
+        transition: all .4s cubic-bezier(0.65, 0, 0.35, 1);
+        left: 30px;
+        background-image: url('/../assets/_images/play-icon.png');
+        cursor: pointer;
+
+        &.pause {
+            background-image: url('/../assets/_images/pause-icon.png');
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    // ————————————————————————————————————————— 
+    // layers & sections
+    // —————————————————————————————————————————
+
+    .home-hero {
+
+        p,
+        h1 {
+            margin-left: 0;
+        }
+
+        .h1 {
+            font-size: 480%;
+        }
+    }
+
+    .stats>div {
+        margin-left: 8vw;
+
+        &:before {
+            height: 6px;
+            width: 6px;
+            left: -8vw;
+        }
+
+        h3 {
+            font-size: 550%;
+            align-self: end;
+            margin-left: 20px;
+        }
+    }
+
+    .property .link {
+        margin-top: 16px;
+    }
+
+    .section-heading {
+        h2:before {
+            height: 6px;
+            width: 6px;
+            left: 34px;
+            top: -36px;
+        }
+
+        h2:after {
+            height: 40px;
+            width: 40px;
+            left: 0;
+            top: -70px;
+        }
+    }
+
+    .cta {
+        img {
+            width: calc(100% - 40px);
+            margin: auto;
+            height: 300px;
+        }
+
+        .cta__content {
+            display: block;
+            padding: 30px;
+            margin-top: -40px;
+    
+            .button {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .partners .partners__logos img {
+        margin: 0 10px;
+    }
 }

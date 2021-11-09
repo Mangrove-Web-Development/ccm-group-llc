@@ -93,6 +93,29 @@ function videoControl() {
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
+    // ——————————————————————————————————————————————————
+    // hamburger nav
+    // ——————————————————————————————————————————————————
+    var menu = document.querySelector('.main-header__nav > ul');
+
+    function toggleNav() {
+        if (menu.classList.contains('is-active')) {
+            $('#navToggle').attr('aria-expanded', 'false');
+            menu.classList.remove('is-active');
+        } else {
+            menu.classList.add('is-active');
+            $('#navToggle').attr('aria-expanded', 'true');
+        }
+
+        // set focus on first link within menu
+        $('.main-header__nav >div >ul >li:first-child > a').focus();
+    }
+
+
+    $('#navToggle').click(function () {
+        toggleNav();
+    });
+
     videoControl();
 
     barba.init({
@@ -146,8 +169,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     });
 
-    
-    Barba.Dispatcher.on('newPageReady', function(current, container) {
+
+    Barba.Dispatcher.on('newPageReady', function (current, container) {
         history.scrollRestoration = 'manual';
     });
 
@@ -192,21 +215,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var menu = document.querySelector('.main-header__nav >div');
 
     function toggleNav() {
-      if (menu.classList.contains('is-active')) {
-        $('#navToggle').attr('aria-expanded', 'false');
-        menu.classList.remove('is-active');
-      } else {
-        menu.classList.add('is-active');
-        $('#navToggle').attr('aria-expanded', 'true');
-      }
+        if (menu.classList.contains('is-active')) {
+            $('#navToggle').attr('aria-expanded', 'false');
+            menu.classList.remove('is-active');
+        } else {
+            menu.classList.add('is-active');
+            $('#navToggle').attr('aria-expanded', 'true');
+        }
 
-      // set focus on first link within menu
-      $('.main-header__nav >div >ul >li:first-child > a').focus();
+        // set focus on first link within menu
+        $('.main-header__nav >div >ul >li:first-child > a').focus();
     }
 
 
     $('#navToggle').click(function () {
-      toggleNav();
+        toggleNav();
     });
 
 }); // end document.ready
