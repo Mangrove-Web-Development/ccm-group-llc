@@ -96,11 +96,11 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
 // S T A T E S
 // ————————————————————————————————————————— 
 ::selection {
-    background: rgba(46, 49, 146, 0.2);
+    background: rgba(46, 49, 146, 0.3);
 }
 
 ::-moz-selection {
-    background: rgba(46, 49, 146, 0.2);
+    background: rgba(46, 49, 146, 0.3);
 }
 
 .keyboard-focus :focus {
