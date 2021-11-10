@@ -184,6 +184,23 @@
     }
 }
 
+@media only screen and (min-width: 700px) {
+    .history {
+        margin-bottom: 130px;
+        
+        .history-entry {
+            &.history-entry--left .history-entry__image {
+                margin-top: 80px;
+            }
+
+            &.history-entry--right .history-entry__content {
+                margin-top: 80px;
+            }
+        }
+    }
+}
+
+
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
     body {
         font-size: 55%;
@@ -264,7 +281,7 @@
         overflow: hidden;
         padding-bottom: 100%;
         height: 0;
-        
+
         iframe,
         video,
         embed {
@@ -439,7 +456,7 @@
             display: block;
             padding: 30px;
             margin-top: -40px;
-    
+
             .button {
                 margin-top: 30px;
             }
@@ -470,6 +487,7 @@
 
     .cta .cta__content,
     .history .history-entry .history-entry__content {
+
         &:before,
         &:after {
             height: 50px;

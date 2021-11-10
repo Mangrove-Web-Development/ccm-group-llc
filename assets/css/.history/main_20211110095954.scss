@@ -876,6 +876,7 @@ iframe {
 
 .history {
     position: relative;
+    margin-bottom: 130px;
     overflow: hidden;
 
     .history-line {
@@ -889,6 +890,12 @@ iframe {
     }
 
     .history-entry {
+        &.history-entry--left {
+            .history-entry__image {
+                margin-top: 80px;
+            }
+        }
+
         &.history-entry--right {
             direction: rtl;
         }
