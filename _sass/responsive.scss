@@ -446,4 +446,44 @@
     .partners .partners__logos img {
         margin: 0 10px;
     }
+
+    .history .history-entry .history-entry__content {
+        padding: 40px 30px;
+
+        &:before {
+            top: -8px;
+            left: -8px;
+        }
+
+        &:after {
+            bottom: -8px;
+            right: -8px;
+        }
+
+        .h2 {
+            margin-bottom: 5px;
+        }
+    }
+
+    .cta .cta__content,
+    .history .history-entry .history-entry__content {
+        &:before,
+        &:after {
+            height: 50px;
+            width: 50px;
+            border-width: 8px;
+        }
+    }
+
+    .cta .cta__content {
+        &:before {
+            top: -8px;
+            left: -8px;
+        }
+
+        &:after {
+            top: -8px;
+            right: -8px;
+        }
+    }
 }

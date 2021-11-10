@@ -28,8 +28,8 @@ history_timeline:
 
 <div data-barba="container" data-barba-namespace="history">
     <header class="wo pv-med page-header">
-        <h1 class="h1 editable col-2-to-9">History</h1>
-        <p class="editable col-2-to-9 p-lg">
+        <h1 class="h1 editable col-2-to-9 m-col-1-to-7 s-col-1-to-5">History</h1>
+        <p class="editable col-2-to-9 m-col-1-to-7 s-col-1-to-5 p-lg">
             Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat. Donec odio. Quisque volutpat.
         </p>
     </header>
@@ -38,10 +38,10 @@ history_timeline:
         <div class="history-line"></div>
         {% for item in page.history_timeline %}
         <section class="history-entry history-entry--{% cycle 'left', 'right'%} wo pv-med">
-            <div class="history-entry__image col-2-to-8">
+            <div class="history-entry__image col-2-to-8 m-col-1-to-5 s-col-1-to-5">
                 <img src="{{ item.image }}" alt="{{ item.image_alt }}">
             </div>
-            <div class="history-entry__content col-8-to-13">
+            <div class="history-entry__content col-8-to-13 m-col-5-to-9 s-col-1-to-5">
                 <h2 class="h2">{{ item.year }}</h2>
                 <p>
                     {{ item.text }}
