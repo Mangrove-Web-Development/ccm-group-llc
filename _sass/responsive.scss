@@ -187,7 +187,7 @@
 @media only screen and (min-width: 700px) {
     .history {
         margin-bottom: 130px;
-        
+
         .history-entry {
             &.history-entry--left .history-entry__image {
                 margin-top: 80px;
@@ -389,9 +389,7 @@
     // ————————————————————————————————————————— 
     // layers & sections
     // —————————————————————————————————————————
-
     .home-hero {
-
         p,
         h1 {
             margin-left: 0;
@@ -421,6 +419,14 @@
             font-size: 550%;
             align-self: end;
         }
+    }
+
+    .property-section .lg-p {
+        margin-bottom: 0;
+    }
+
+    .property-section h2.h3 {
+        margin-bottom: -10px;
     }
 
     .property .link {

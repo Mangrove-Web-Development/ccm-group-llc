@@ -117,6 +117,10 @@ img[class*="col-"] {
         display: none !important;
     }
 
+    .wo .right, .wo-stacked .right, .wo-full .right {
+        justify-self: start;
+    }
+
     @for $a-s from 1 through ($column-count-s) {
         @for $b-s from 1 through ($column-count-s + 1) {
             .s-col-#{$a-s}-to-#{$b-s} {
