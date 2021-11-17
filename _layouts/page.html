@@ -11,6 +11,22 @@
     </header>
     
     <main>
+    {% for block in page.page_blocks %}
+        {% case block._id %}
+            {% when 'general_content' %}
+                {% include /blocks/general-content.html block=block %}
+    
+            {% when 'full_w_map' %}
+                {% include /blocks/full-w-image.html block=block %}
+
+            {% when 'image_sidebar' %}
+                {% include /blocks/image-sidebar.html %}
+    
+    
+            {% else %}
+            <!-- else -->
+        {% endcase %}
+    {% endfor %}
 
         {% include /blocks/general-content.html %}
 
