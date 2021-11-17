@@ -49,6 +49,7 @@ _array_structures:
   # Page Blocks
   # —————————————————————————————————————
   page_blocks:
+    style: 'modal'
     values:
       # ———
       # General Content
