@@ -10,23 +10,8 @@
         </p>
     </header>
     
-    <main>
-    
-        {% include /blocks/intro.html %}
-
-        {% include /blocks/full-w-image.html %}
-
-        {% include /blocks/general-content.html %}
-
-        {% include /blocks/image-sidebar.html %}
-
-        {% include /blocks/general-content.html %}
-
-        {% include /blocks/team.html %}
-
-        {% include /blocks/cta.html %}
-    
-        {% for block in page.page_blocks %}
+    <main>    
+    {% for block in page.section_blocks %}
         {% case block._id %}
             {% when 'general_content' %}
                 {% include /blocks/general-content.html block=block %}
@@ -34,17 +19,25 @@
             {% when 'full_w_image' %}
                 {% include /blocks/full-w-image.html block=block %}
     
-            {% when 'youtube_embed' %}
-                {% include /blocks/youtube-embed.html block=block %}
+            {% when 'cta' %}
+                {% include /blocks/cta.html block=block %}
     
             {% when 'team' %}
                 {% include /blocks/team.html block=block %}
+
+            {% when 'intro' %}
+                {% include /blocks/intro.html block=block %}
+    
+            {% when 'full_w_map' %}
+                {% include /blocks/full-w-map.html block=block %}
+
+            {% when 'image_sidebar' %}
+                {% include /blocks/image-sidebar.html block=block %}
     
             {% else %}
             <!-- else -->
         {% endcase %}
-        {% endfor %}
-    
+    {% endfor %}
     </main>
 </div>
 
