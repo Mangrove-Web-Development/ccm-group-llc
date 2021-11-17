@@ -118,6 +118,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     videoControl();
 
+    // bio read more 
+    $('.team__container__team-member button').click(function () {
+        $(this).next().addClass("visible");
+        $(this).hide();
+    });
+
     barba.init({
         transitions: [{
             name: 'default',

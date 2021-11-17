@@ -397,6 +397,8 @@ iframe {
     text-decoration-thickness: 1.5px;
     text-underline-offset: 4px;
     transition: .2s all $easing;
+    background: transparent;
+    border: none;
 
     &:hover {
         color: $pink;
@@ -771,7 +773,7 @@ iframe {
         }
 
         img {
-            height: 350px;
+            height: clamp(350px, 30vw, 600px);
             object-fit: cover;
             width: 100%;
         }
@@ -783,6 +785,15 @@ iframe {
         .link {
             float: right;
             margin-top: 20px;
+        }
+
+        .team__container__team-member__more-bio {
+            clear: both;
+            display: none;
+
+            &.visible {
+                display: block;
+            }
         }
     }
 }
@@ -800,6 +811,12 @@ iframe {
 .full-w-image {
     p {
         padding: 0;
+    }
+}
+
+.full-w-image {
+    img {
+        width: 100%;
     }
 }
 
