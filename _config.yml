@@ -62,16 +62,6 @@ _array_structures:
           image_alt_text:
           caption:
       # ———
-      # Full Width Map
-      # ———
-      - label: Full Width Map
-        icon: location_on # fonts.google.com/icons
-        value:
-          _id: full_w_map # use file name w/ underscores
-          longitude:
-          latitude:
-          caption:
-      # ———
       # Property Location
       # ———
       - label: Property Location
