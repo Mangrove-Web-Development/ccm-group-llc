@@ -3,7 +3,7 @@
         {% assign longVAR =  include.block.longitude %}
         {% assign latVAR =  include.block.latitude %}
         
-        {% include google-map.html latitude=-45.8787605 longitude=170.5027976 zoom=5 %}
+        {% include google-map.html latitude=latVAR longitude=longVAR zoom=5 %}
     </div>
     <p class="col-6-to-13 m-col-5-to-9 s-col-1-to-5 right">{{ include.block.caption }}</p>
 </section>

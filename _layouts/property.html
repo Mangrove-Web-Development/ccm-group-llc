@@ -26,10 +26,18 @@
             </div>
         </section>
 
-        {% include property-location.html %}
-
-        {% include /blocks/full-w-image.html %}
+    {% for block in page.page_blocks %}
+        {% case block._id %}
+            {% when 'property_location' %}
+                {% include property-location.html block=block %}
     
+            {% when 'full_w_image' %}
+                {% include /blocks/full-w-image.html block=block %}
+
+            {% else %}
+            <!-- else -->
+        {% endcase %}
+    {% endfor %}    
     </main>
 </div>
 
