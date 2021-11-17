@@ -262,6 +262,16 @@
     .page-header .h1 {
         margin-bottom: -20px;
     }
+
+    .team .team__container__team-member {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+        margin-bottom: 60px;
+
+        img {
+            height: 500px;
+        }
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -544,5 +554,15 @@
 
     .full-w-map #map {
         height: 300px !important;
+    }
+
+    .team .team__container__team-member {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+
+        img {
+            height: auto;
+        }
     }
 }
