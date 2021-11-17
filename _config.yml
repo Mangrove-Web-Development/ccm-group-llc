@@ -84,6 +84,7 @@ _array_structures:
   # Section Blocks
   # —————————————————————————————————————
   section_blocks:
+    style: 'modal'
     values:
       # ———
       # Intro
