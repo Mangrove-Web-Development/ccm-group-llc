@@ -78,8 +78,8 @@ _array_structures:
           _id: image_sidebar # use file name w/ underscores
           image:
           image_alt_text:
-          sidebar_heading:
-          sidebar_caption:
+          sidebar_caption_heading:
+          sidebar_caption_text:
   # —————————————————————————————————————
   # Section Blocks
   # —————————————————————————————————————
