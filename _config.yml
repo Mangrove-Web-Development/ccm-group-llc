@@ -33,7 +33,7 @@ collections:
   sections:
     output: true
     _hide_content: true
-    permalink: /:name 
+    permalink: /:name
   properties:
     output: true
     _hide_content: true
@@ -41,7 +41,7 @@ collections:
   general_pages:
     output: true
     _hide_content: true
-    permalink: /:name
+    permalink: /:permalink
 
 # Layers
 _array_structures:
