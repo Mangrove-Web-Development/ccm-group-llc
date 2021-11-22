@@ -41,7 +41,6 @@ collections:
   general_pages:
     output: true
     _hide_content: true
-    permalink: /:permalink
 
 # Layers
 _array_structures:
