@@ -242,9 +242,17 @@ p.p-lg,
     line-height: 150%;
 }
 
+li a,
 p a {
     font-size: 100%;
     color: $blue;
+    // transition: .2s all $easing;
+    text-decoration-thickness: 1px;
+
+    &:hover {
+        color: $magenta;
+        text-decoration-thickness: 2px;
+    }
 }
 
 b,
