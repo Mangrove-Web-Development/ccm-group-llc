@@ -50,23 +50,25 @@ permalink: /investment/properties
             <p class="lg-p editable col-7-to-13 m-col-4-to-9 s-col-1-to-5 right">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eliit.
             </p>
-            {% for cat1 in site.properties %}
-            {% if cat1.category == "Mixed Use" %}
-            {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
-            <div class="property {% if thecycle == 'odd' %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% else %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% endif %}">
-                <img src="{{ cat1.featured_image }}" alt="{{ cat1.featured_image_alt }}" />
+
+            {% assign mixedUse = site.properties | where:"category", "Mixed Use" %}
+            {% for item in mixedUse %}
+            {% assign mod = forloop.index | modulo: 2 %}
+            <div class="property {% if mod == 0 %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% else %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% endif %}">
+                <img src="{{ item.featured_image }}" alt="{{ item.featured_image_alt }}" />
                 <h3 class="h4">
-                    {{ cat1.title }}
+                    {{ item.title }}
                 </h3>
+                <!--
                 <h4 class="p">
-                    {{ cat1.category }}
+                    {{ item.category }}
                 </h4>
-                <a class="link" href="{{ cat1.url }}">
+                -->
+                <a class="link" href="{{ item.url }}">
                     View property
-                    <span class="sr-only">: {{ cat1.title }}</span>
+                    <span class="sr-only">: {{ item.title }}</span>
                 </a>
             </div>
-            {% endif %}
             {% endfor %}
         </section>
 
@@ -75,23 +77,24 @@ permalink: /investment/properties
             <p class="lg-p editable col-7-to-13 m-col-4-to-9 s-col-1-to-5 right">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eliit.
             </p>
-            {% for cat2 in site.properties %}
-            {% if cat2.category == "Commercial" %}
-            {% capture thecycle2 %}{% cycle 'odd', 'even' %}{% endcapture %}
-            <div class="property {% if thecycle2 == 'odd' %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% else %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% endif %}">
-                <img src="{{ cat2.featured_image }}" alt="{{ cat2.featured_image_alt }}" />
+            {% assign commercial = site.properties | where:"category", "Commercial" %}
+            {% for item in commercial %}
+            {% assign mod = forloop.index | modulo: 2 %}
+            <div class="property {% if mod == 0 %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% else %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% endif %}">
+                <img src="{{ item.featured_image }}" alt="{{ item.featured_image_alt }}" />
                 <h3 class="h4">
-                    {{ cat2.title }}
+                    {{ item.title }}
                 </h3>
+                <!--
                 <h4 class="p">
-                    {{ cat2.category }}
+                    {{ item.category }}
                 </h4>
-                <a class="link" href="{{ cat2.url }}">
+                -->
+                <a class="link" href="{{ item.url }}">
                     View property
-                    <span class="sr-only">: {{ cat2.title }}</span>
+                    <span class="sr-only">: {{ item.title }}</span>
                 </a>
             </div>
-            {% endif %}
             {% endfor %}
         </section>
 
@@ -100,23 +103,24 @@ permalink: /investment/properties
             <p class="lg-p editable col-7-to-13 m-col-4-to-9 s-col-1-to-5 right">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eliit.
             </p>
-            {% for cat3 in site.properties %}
-            {% if cat3.category == "Residential" %}
-            {% capture thecycle3 %}{% cycle 'odd', 'even' %}{% endcapture %}
-            <div class="property {% if thecycle3 == 'odd' %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% else %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% endif %}">
-                <img src="{{ cat3.featured_image }}" alt="{{ cat3.featured_image_alt }}" />
+            {% assign residential = site.properties | where:"category", "Residential" %}
+            {% for item in residential %}
+            {% assign mod = forloop.index | modulo: 2 %}
+            <div class="property {% if mod == 0 %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% else %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% endif %}">
+                <img src="{{ item.featured_image }}" alt="{{ item.featured_image_alt }}" />
                 <h3 class="h4">
-                    {{ cat3.title }}
+                    {{ item.title }}
                 </h3>
+                <!--
                 <h4 class="p">
-                    {{ cat3.category }}
+                    {{ item.category }}
                 </h4>
-                <a class="link" href="{{ cat3.url }}">
+                -->
+                <a class="link" href="{{ item.url }}">
                     View property
-                    <span class="sr-only">: {{ cat3.title }}</span>
+                    <span class="sr-only">: {{ item.title }}</span>
                 </a>
             </div>
-            {% endif %}
             {% endfor %}
         </section>
 
@@ -125,23 +129,24 @@ permalink: /investment/properties
             <p class="lg-p editable col-7-to-13 m-col-4-to-9 s-col-1-to-5 right">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eliit.
             </p>
-            {% for cat4 in site.properties %}
-            {% if cat4.category == "Other" %}
-            {% capture thecycle4 %}{% cycle 'odd', 'even' %}{% endcapture %}
-            <div class="property {% if thecycle4 == 'odd' %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% else %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% endif %}">
-                <img src="{{ cat4.featured_image }}" alt="{{ cat4.featured_image_alt }}" />
+            {% assign other = site.properties | where:"category", "Other" %}
+            {% for item in other %}
+            {% assign mod = forloop.index | modulo: 2 %}
+            <div class="property {% if mod == 0 %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% else %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% endif %}">
+                <img src="{{ item.featured_image }}" alt="{{ item.featured_image_alt }}" />
                 <h3 class="h4">
-                    {{ cat4.title }}
+                    {{ item.title }}
                 </h3>
+                <!--
                 <h4 class="p">
-                    {{ cat4.category }}
+                    {{ item.category }}
                 </h4>
-                <a class="link" href="{{ cat4.url }}">
+                -->
+                <a class="link" href="{{ item.url }}">
                     View property
-                    <span class="sr-only">: {{ cat4.title }}</span>
+                    <span class="sr-only">: {{ item.title }}</span>
                 </a>
             </div>
-            {% endif %}
             {% endfor %}
         </section>
         
