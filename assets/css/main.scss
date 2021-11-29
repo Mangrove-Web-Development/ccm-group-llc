@@ -620,6 +620,12 @@ iframe {
         "cat cat";
     margin-bottom: 30px;
 
+    &.ft-properties__property--ft {
+        img {
+            height: clamp(300px, 90vh, 1000px);
+        }
+    }
+
     &:not(.ft-properties__property--ft) {
         img {
             height: clamp(300px, 30vw, 600px);

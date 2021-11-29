@@ -94,58 +94,77 @@ partners:
         <h2 class="h3 editable col-1-to-13 m-col-1-to-9 s-col-1-to-5">
             Featured holdings
         </h2>
+        {% for fp1 in site.properties %}
+        {% if fp1.slug == page.first_featured_property %}
         <div class="property ft-properties__property--ft col-1-to-13 m-col-1-to-9 s-col-1-to-5">
-            <img src="/assets/_images/placeholder3.jpg" alt="" />
+            <img src="{{ fp1.featured_image }}" alt="{{ fp1.featured_image_alt }}" />
             <h3 class="h4">
-                Property Name
+                {{ fp1.title }}
             </h3>
             <h4 class="p">
-                Category
+                {{ fp1.category }}
             </h4>
-            <a class="link" href="#">
+            <a class="link" href="{{ fp1.url }}">
                 View property
-                <span class="sr-only">: Property Name</span>
+                <span class="sr-only">: {{ fp1.title }}</span>
             </a>
         </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for fp2 in site.properties %}
+        {% if fp2.slug == page.second_featured_property %}
         <div class="property col-1-to-5 m-col-1-to-5 s-col-1-to-5">
-            <img src="/assets/_images/placeholder2.jpg" alt="" />
+            <img src="{{ fp2.featured_image }}" alt="{{ fp2.featured_image_alt }}" />
             <h3 class="h4">
-                Property Name
+                {{ fp2.title }}
             </h3>
             <h4 class="p">
-                Category
+                {{ fp2.category }}
             </h4>
-            <a class="link" href="#">
+            <a class="link" href="{{ fp2.url }}">
                 View property
-                <span class="sr-only">: Property Name</span>
+                <span class="sr-only">: {{ fp2.title }}</span>
             </a>
         </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for fp3 in site.properties %}
+        {% if fp3.slug == page.third_featured_property %}
         <div class="property col-5-to-9 m-col-5-to-9 s-col-1-to-5">
-            <img src="/assets/_images/placeholder5.jpg" alt="" />
+            <img src="{{ fp3.featured_image }}" alt="{{ fp3.featured_image_alt }}" />
             <h3 class="h4">
-                Property Name
+                {{ fp3.title }}
             </h3>
             <h4 class="p">
-                Category
+                {{ fp3.category }}
             </h4>
-            <a class="link" href="#">
+            <a class="link" href="{{ fp3.url }}">
                 View property
-                <span class="sr-only">: Property Name</span>
+                <span class="sr-only">: {{ fp3.title }}</span>
             </a>
         </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for fp4 in site.properties %}
+        {% if fp4.slug == page.fourth_featured_property %}
         <div class="property col-9-to-13 m-hide s-col-1-to-5">
-            <img src="/assets/_images/placeholder9.jpg" alt="" />
+            <img src="{{ fp4.featured_image }}" alt="{{ fp4.featured_image_alt }}" />
             <h3 class="h4">
-                Property Name
+                {{ fp4.title }}
             </h3>
             <h4 class="p">
-                Category
+                {{ fp4.category }}
             </h4>
-            <a class="link" href="#">
+            <a class="link" href="{{ fp4.url }}">
                 View property
-                <span class="sr-only">: Property Name</span>
+                <span class="sr-only">: {{ fp4.title }}</span>
             </a>
         </div>
+        {% endif %}
+        {% endfor %}
     </section>
 
     <section class="cta wo pv">
