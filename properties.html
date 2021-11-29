@@ -50,32 +50,24 @@ permalink: /investment/properties
             <p class="lg-p editable col-7-to-13 m-col-4-to-9 s-col-1-to-5 right">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eliit.
             </p>
-            <div class="property col-1-to-7 m-col-1-to-5 s-col-1-to-5">
-                <img src="/assets/_images/placeholder4.jpg" alt="" />
+            {% for cat1 in site.properties %}
+            {% if cat1.category == "Mixed Use" %}
+            {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+            <div class="property {% if thecycle == 'odd' %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% else %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% endif %}">
+                <img src="{{ cat1.featured_image }}" alt="{{ cat1.featured_image_alt }}" />
                 <h3 class="h4">
-                    Property Name
+                    {{ cat1.title }}
                 </h3>
                 <h4 class="p">
-                    Category
+                    {{ cat1.category }}
                 </h4>
-                <a class="link" href="#">
+                <a class="link" href="{{ cat1.url }}">
                     View property
-                    <span class="sr-only">: Property Name</span>
+                    <span class="sr-only">: {{ cat1.title }}</span>
                 </a>
             </div>
-            <div class="property col-7-to-13 m-col-5-to-9 s-col-1-to-5">
-                <img src="/assets/_images/placeholder2.jpg" alt="" />
-                <h3 class="h4">
-                    Property Name
-                </h3>
-                <h4 class="p">
-                    Category
-                </h4>
-                <a class="link" href="#">
-                    View property
-                    <span class="sr-only">: Property Name</span>
-                </a>
-            </div>
+            {% endif %}
+            {% endfor %}
         </section>
 
         <section class="wo pv-med property-section">
@@ -83,32 +75,24 @@ permalink: /investment/properties
             <p class="lg-p editable col-7-to-13 m-col-4-to-9 s-col-1-to-5 right">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eliit.
             </p>
-            <div class="property col-1-to-7 m-col-1-to-5 s-col-1-to-5">
-                <img src="/assets/_images/placeholder1.jpg" alt="" />
+            {% for cat2 in site.properties %}
+            {% if cat2.category == "Commercial" %}
+            {% capture thecycle2 %}{% cycle 'odd', 'even' %}{% endcapture %}
+            <div class="property {% if thecycle2 == 'odd' %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% else %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% endif %}">
+                <img src="{{ cat2.featured_image }}" alt="{{ cat2.featured_image_alt }}" />
                 <h3 class="h4">
-                    Property Name
+                    {{ cat2.title }}
                 </h3>
                 <h4 class="p">
-                    Category
+                    {{ cat2.category }}
                 </h4>
-                <a class="link" href="#">
+                <a class="link" href="{{ cat2.url }}">
                     View property
-                    <span class="sr-only">: Property Name</span>
+                    <span class="sr-only">: {{ cat2.title }}</span>
                 </a>
             </div>
-            <div class="property col-7-to-13 m-col-5-to-9 s-col-1-to-5">
-                <img src="/assets/_images/placeholder7.jpg" alt="" />
-                <h3 class="h4">
-                    Property Name
-                </h3>
-                <h4 class="p">
-                    Category
-                </h4>
-                <a class="link" href="#">
-                    View property
-                    <span class="sr-only">: Property Name</span>
-                </a>
-            </div>
+            {% endif %}
+            {% endfor %}
         </section>
 
         <section class="wo pv-med property-section">
@@ -116,45 +100,24 @@ permalink: /investment/properties
             <p class="lg-p editable col-7-to-13 m-col-4-to-9 s-col-1-to-5 right">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eliit.
             </p>
-            <div class="property col-1-to-7 m-col-1-to-5 s-col-1-to-5">
-                <img src="/assets/_images/placeholder3.jpg" alt="" />
+            {% for cat3 in site.properties %}
+            {% if cat3.category == "Residential" %}
+            {% capture thecycle3 %}{% cycle 'odd', 'even' %}{% endcapture %}
+            <div class="property {% if thecycle3 == 'odd' %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% else %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% endif %}">
+                <img src="{{ cat3.featured_image }}" alt="{{ cat3.featured_image_alt }}" />
                 <h3 class="h4">
-                    Property Name
+                    {{ cat3.title }}
                 </h3>
                 <h4 class="p">
-                    Category
+                    {{ cat3.category }}
                 </h4>
-                <a class="link" href="#">
+                <a class="link" href="{{ cat3.url }}">
                     View property
-                    <span class="sr-only">: Property Name</span>
+                    <span class="sr-only">: {{ cat3.title }}</span>
                 </a>
             </div>
-            <div class="property col-7-to-13 m-col-5-to-9 s-col-1-to-5">
-                <img src="/assets/_images/placeholder4.jpg" alt="" />
-                <h3 class="h4">
-                    Property Name
-                </h3>
-                <h4 class="p">
-                    Category
-                </h4>
-                <a class="link" href="#">
-                    View property
-                    <span class="sr-only">: Property Name</span>
-                </a>
-            </div>
-            <div class="property col-1-to-7 m-col-1-to-5 s-col-1-to-5">
-                <img src="/assets/_images/placeholder6.jpg" alt="" />
-                <h3 class="h4">
-                    Property Name
-                </h3>
-                <h4 class="p">
-                    Category
-                </h4>
-                <a class="link" href="#">
-                    View property
-                    <span class="sr-only">: Property Name</span>
-                </a>
-            </div>
+            {% endif %}
+            {% endfor %}
         </section>
 
         <section class="wo pv-med property-section">
@@ -162,59 +125,24 @@ permalink: /investment/properties
             <p class="lg-p editable col-7-to-13 m-col-4-to-9 s-col-1-to-5 right">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eliit.
             </p>
-            <div class="property col-1-to-7 m-col-1-to-5 s-col-1-to-5">
-                <img src="/assets/_images/placeholder5.jpg" alt="" />
+            {% for cat4 in site.properties %}
+            {% if cat4.category == "Other" %}
+            {% capture thecycle4 %}{% cycle 'odd', 'even' %}{% endcapture %}
+            <div class="property {% if thecycle4 == 'odd' %}col-1-to-7 m-col-1-to-5 s-col-1-to-5{% else %}col-7-to-13 m-col-5-to-9 s-col-1-to-5{% endif %}">
+                <img src="{{ cat4.featured_image }}" alt="{{ cat4.featured_image_alt }}" />
                 <h3 class="h4">
-                    Property Name
+                    {{ cat4.title }}
                 </h3>
                 <h4 class="p">
-                    Category
+                    {{ cat4.category }}
                 </h4>
-                <a class="link" href="#">
+                <a class="link" href="{{ cat4.url }}">
                     View property
-                    <span class="sr-only">: Property Name</span>
+                    <span class="sr-only">: {{ cat4.title }}</span>
                 </a>
             </div>
-            <div class="property col-7-to-13 m-col-5-to-9 s-col-1-to-5">
-                <img src="/assets/_images/placeholder3.jpg" alt="" />
-                <h3 class="h4">
-                    Property Name
-                </h3>
-                <h4 class="p">
-                    Category
-                </h4>
-                <a class="link" href="#">
-                    View property
-                    <span class="sr-only">: Property Name</span>
-                </a>
-            </div>
-
-            <div class="property col-1-to-7 m-col-1-to-5 s-col-1-to-5">
-                <img src="/assets/_images/placeholder2.jpg" alt="" />
-                <h3 class="h4">
-                    Property Name
-                </h3>
-                <h4 class="p">
-                    Category
-                </h4>
-                <a class="link" href="#">
-                    View property
-                    <span class="sr-only">: Property Name</span>
-                </a>
-            </div>
-            <div class="property col-7-to-13 m-col-5-to-9 s-col-1-to-5">
-                <img src="/assets/_images/placeholder8.jpg" alt="" />
-                <h3 class="h4">
-                    Property Name
-                </h3>
-                <h4 class="p">
-                    Category
-                </h4>
-                <a class="link" href="#">
-                    View property
-                    <span class="sr-only">: Property Name</span>
-                </a>
-            </div>
+            {% endif %}
+            {% endfor %}
         </section>
         
     </main>
