@@ -26,7 +26,6 @@ _options:
 
 # CloudCannon Field Descriptions
 _comments:
-  name: This will get converted to the file name
 
 # Collections (Custom Post Types)
 collections:
