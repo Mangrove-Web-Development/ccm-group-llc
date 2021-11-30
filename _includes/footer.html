@@ -21,14 +21,6 @@
         <small class="editable">© Copyright 2021 CCM Group LLC</small>  
     </div>
 
-    <nav id="footerNav" aria=label="Footer links" class="main-footer__nav col-8-to-10 m-col-4-to-6 s-col-1-to-5">
-    {% for footerNavItem in site.data.footer_navigation %}
-        <a class="main-header__nav__link{% if pagePermalink == footerNavItem.url %} active{% endif %}" href="{{ navItem.url }}">
-            {{ footerNavItem.title }}
-        </a>
-    {% endfor %}
-    </nav>
-
     <div class="main-footer__address col-10-to-13 m-col-6-to-9 s-col-1-to-5">
         <address>{{ site.data.site_info.address-text }}</address>
     </div>

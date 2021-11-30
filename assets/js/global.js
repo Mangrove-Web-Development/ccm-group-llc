@@ -222,31 +222,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 link.classList.add("active");
             }
         });
+
+        // scroll to the top of the page 
+        gsap.to(window, {
+            duration: 0,
+            scrollTo: 0
+        });
     });
-
-
-    // ——————————————————————————————————————————————————
-    // hamburger nav
-    // ——————————————————————————————————————————————————
-    // var toggle = document.querySelector('#navToggle');
-    // var menu = document.querySelector('.main-header__nav >div');
-
-    // function toggleNav() {
-    //     if (menu.classList.contains('is-active')) {
-    //         $('#navToggle').attr('aria-expanded', 'false');
-    //         menu.classList.remove('is-active');
-    //     } else {
-    //         menu.classList.add('is-active');
-    //         $('#navToggle').attr('aria-expanded', 'true');
-    //     }
-
-    //     // set focus on first link within menu
-    //     $('.main-header__nav >div >ul >li:first-child > a').focus();
-    // }
-
-
-    // $('#navToggle').click(function () {
-    //     toggleNav();
-    // });
 
 }); // end document.ready

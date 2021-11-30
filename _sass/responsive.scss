@@ -272,6 +272,11 @@
             height: 500px;
         }
     }
+
+    .property-intro .property-intro__content {
+        width: 400px;
+        padding: 40px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -281,14 +286,20 @@
     // —————————————————————————————————————————
     .pv-lg,
     .pv {
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .pv-med,
     .pv-small {
         margin-top: 30px;
         margin-bottom: 30px;
+    }
+
+    .page-header > p,
+    .home-hero h1,
+    .partners .partners__logos {
+        margin-top: 20px !important;
     }
 
     .main-header__logo-area {
@@ -301,16 +312,22 @@
     }
 
     .main-footer {
+        .main-footer__nav,
+        .main-footer__site-title,
+        .main-footer__small {
+            margin-top: 40px;
+        }
+
+        .main-footer__nav {
+            order: 6;
+        }
+
         .main-footer__spacer {
             display: none;
         }
 
         .main-footer__small {
             order: 7;
-        }
-
-        .main-footer__site-title {
-            display: none;
         }
     }
 
@@ -383,7 +400,7 @@
     .general-content h3,
     .h3 {
         font-size: 230%;
-        margin-bottom: 5px;
+        margin-bottom: 20px;
         margin-top: 20px;
         line-height: 120%;
     }
@@ -435,6 +452,7 @@
 
     .stats>div {
         margin-left: 8vw;
+        margin-top: 30px;
 
         &:before {
             height: 6px;
@@ -462,8 +480,12 @@
         margin-bottom: -10px;
     }
 
-    .property .link {
-        margin-top: 16px;
+    .property {
+        margin-bottom: 60px;
+
+        .link {
+            margin-top: 16px;
+        }
     }
 
     .section-heading {
@@ -559,5 +581,22 @@
         img {
             height: auto;
         }
+    }
+
+    .property-intro {
+        img {
+            height: clamp(300px, 30vw, 600px);
+        }
+
+        .property-intro__content {
+            padding: 40px;
+            position: relative;
+            margin-top: -40px;
+        } 
+    }
+
+    .ft-partners .ft-partners__partner p {
+        margin-top: 0;
+        margin-bottom: 50px;
     }
 }
