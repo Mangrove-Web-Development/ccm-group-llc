@@ -103,68 +103,105 @@ function videoControl() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
-
-    // ——————————————————————————————————————————————————
-    // hamburger nav
-    // ——————————————————————————————————————————————————
+// ——————————————————————————————————————————————————
+// hamburger nav
+// ——————————————————————————————————————————————————
+function toggleNav() {
     var menu = document.querySelector('.main-header__nav > ul');
 
-    function toggleNav() {
-        if (menu.classList.contains('is-active')) {
-            $('#navToggle').attr('aria-expanded', 'false');
-            menu.classList.remove('is-active');
-        } else {
-            menu.classList.add('is-active');
-            $('#navToggle').attr('aria-expanded', 'true');
-        }
-
-        // set focus on first link within menu
-        $('.main-header__nav >div >ul >li:first-child > a').focus();
+    if (menu.classList.contains('is-active')) {
+        $('#navToggle').attr('aria-expanded', 'false');
+        menu.classList.remove('is-active');
+    } else {
+        menu.classList.add('is-active');
+        $('#navToggle').attr('aria-expanded', 'true');
     }
 
+    // set focus on first link within menu
+    $('.main-header__nav >div >ul >li:first-child > a').focus();
+}
 
-    $('#navToggle').click(function () {
-        toggleNav();
-    });
-
-    videoControl();
-
-    // bio read more 
-    $('.team__container__team-member button').click(function () {
-        $(this).next().addClass("visible");
-        $(this).hide();
-    });
+document.addEventListener("DOMContentLoaded", function (event) {
 
     barba.init({
-        transitions: [{
-            name: 'default',
-            leave(data) {
-                return gsap.to(data.current.container, {
-                    ease: Power4.easeInOut,
-                    opacity: 0,
-                    display: "none",
-                    duration: .5,
-                });
+        transitions: [
+            {
+                name: 'once',
+                once() {
+                    gsap.fromTo(
+                        document.getElementById('bodyID'), {
+                            ease: Power4.easeInOut,
+                            opacity: 0,
+                        },
+                        {
+                            delay: 1,
+                            opacity: 1,
+                            duration: .5,
+                        }
+                    );
+                },
             },
-            enter(data) {
-                return gsap.fromTo(
-                    data.next.container,
-                    {
+            {
+                name: 'default',
+                leave(data) {
+                    return gsap.to(data.current.container, {
                         ease: Power4.easeInOut,
                         opacity: 0,
-                    },
-                    {
-                        delay: 1,
-                        opacity: 1,
+                        display: "none",
                         duration: .5,
-                    }
-                );
-            },
+                    });
+                },
+                enter(data) {
+                    return gsap.fromTo(data.next.container, {
+                            ease: Power4.easeInOut,
+                            opacity: 0,
+                        },
+                        {
+                            delay: 1,
+                            opacity: 1,
+                            duration: .5,
+                        }
+                    );
+                },
+            }
+        ],
+        views: [{
+            namespace: 'home',
+            beforeEnter() {
+                videoControl();
+            }
         }]
     });
 
+    barba.hooks.beforeOnce(() => {
+        // bio read more 
+        if ($('.team__container__team-member button') != "") {
+            $('.team__container__team-member button').click(function () {
+                $(this).next().addClass("visible");
+                $(this).hide();
+            });
+        }
+
+        // ——————————————————————————————————————————————————
+        // hamburger nav
+        // ——————————————————————————————————————————————————
+        $('#navToggle').click(function () {
+            toggleNav();
+        });
+    });
+
     barba.hooks.enter((data) => {
+        $('#navToggle').attr('aria-expanded', 'false');
+        document.querySelector('.main-header__nav > ul').classList.remove('is-active');
+
+        // bio read more 
+        if ($('.team__container__team-member button') != "") {
+            $('.team__container__team-member button').click(function () {
+                $(this).next().addClass("visible");
+                $(this).hide();
+            });
+        }
+
         // —————————————————————————————————————————
         // U P D A T E   N A V - A C T I V E
         // —————————————————————————————————————————
@@ -188,61 +225,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
 
-    // —————————————————————————————————————————————————————
-    // scroll events 
-    // —————————————————————————————————————————————————————
-    $(window).scroll(function () {
-
-    });
-
-
-    // —————————————————————————————————————————————————————
-    // search dropdown
-    // —————————————————————————————————————————————————————
-    var clicked = false;
-
-    $('#toggleSearch').click(function () {
-        toggleBtnClick();
-    });
-
-    $('#searchClose').click(function () {
-        toggleBtnClick();
-    });
-
-    function toggleBtnClick() {
-        if (clicked) {
-            $('#searchContainer').addClass('search--hide');
-            clicked = false;
-        } else {
-            $('#searchContainer').removeClass('search--hide');
-            clicked = true;
-            $('#s').focus();
-        }
-    }
-
-
     // ——————————————————————————————————————————————————
     // hamburger nav
     // ——————————————————————————————————————————————————
-    var toggle = document.querySelector('#navToggle');
-    var menu = document.querySelector('.main-header__nav >div');
+    // var toggle = document.querySelector('#navToggle');
+    // var menu = document.querySelector('.main-header__nav >div');
 
-    function toggleNav() {
-        if (menu.classList.contains('is-active')) {
-            $('#navToggle').attr('aria-expanded', 'false');
-            menu.classList.remove('is-active');
-        } else {
-            menu.classList.add('is-active');
-            $('#navToggle').attr('aria-expanded', 'true');
-        }
+    // function toggleNav() {
+    //     if (menu.classList.contains('is-active')) {
+    //         $('#navToggle').attr('aria-expanded', 'false');
+    //         menu.classList.remove('is-active');
+    //     } else {
+    //         menu.classList.add('is-active');
+    //         $('#navToggle').attr('aria-expanded', 'true');
+    //     }
 
-        // set focus on first link within menu
-        $('.main-header__nav >div >ul >li:first-child > a').focus();
-    }
+    //     // set focus on first link within menu
+    //     $('.main-header__nav >div >ul >li:first-child > a').focus();
+    // }
 
 
-    $('#navToggle').click(function () {
-        toggleNav();
-    });
+    // $('#navToggle').click(function () {
+    //     toggleNav();
+    // });
 
 }); // end document.ready
