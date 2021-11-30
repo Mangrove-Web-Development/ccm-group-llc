@@ -787,11 +787,7 @@ iframe {
         width: calc(33% - 30px);
         margin-right: 30px;
         margin-bottom: 60px;
-
-        &:nth-child(3n) {
-            margin-right: 0;
-        }
-
+        
         img {
             height: clamp(350px, 30vw, 600px);
             object-fit: cover;
