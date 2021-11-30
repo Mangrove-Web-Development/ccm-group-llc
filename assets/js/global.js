@@ -151,8 +151,8 @@ function cursorFollower() {
 
     setInterval(move, 1000 / 60)
     function move() {
-        circle.x = lerp(circle.x, mouseX, 0.1);
-        circle.y = lerp(circle.y, mouseY, 0.1);
+        circle.x = lerp(circle.x, mouseX, 0.2);
+        circle.y = lerp(circle.y, mouseY, 0.2);
         circle.update()
     }
 
@@ -184,11 +184,31 @@ function cursorFollower() {
         });
     }
 
-    $("button").hover(hoverFunc, unhoverFunc);
-    $("a img").hover(hoverFunc, unhoverFunc);
-    $("a.link").hover(hoverFunc, unhoverFunc);
-    $("a.button").hover(hoverFunc, unhoverFunc);
-    $('.main-header__nav').hover(hideFunc, unhoverFunc);
+    if ($("button") != "") {
+        $("button").hover(hoverFunc, unhoverFunc);
+    } else {}
+
+    if ($("a img") != "") {
+        $("a img").hover(hoverFunc, unhoverFunc);
+    } else {}
+
+    if ($("a.link") != "") {
+        $("a.link").hover(hoverFunc, unhoverFunc);
+    } else {}
+
+    if ($("a.button") != "") {
+        $("a.button").hover(hoverFunc, unhoverFunc);
+    } else {}
+
+    if ($('.main-header__nav') != "") {
+        $('.main-header__nav').hover(hideFunc, unhoverFunc);
+    } else {}
+    
+    
+    
+    
+    
+    
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -267,6 +287,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
     barba.hooks.enter((data) => {
+        if (is_touch_device()) {
+
+        } else {
+            cursorFollower();
+        }
+        
         window.scrollTo({top: 0});
 
         $('#navToggle').attr('aria-expanded', 'false');
