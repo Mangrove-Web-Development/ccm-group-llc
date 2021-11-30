@@ -89,6 +89,18 @@ function videoControl() {
             this.classList.remove("pause");
         }
     });
+
+    var mediaVideo2 = $("#ftPropertyVideo").get(0);
+    // play/pause on video click
+    $('#ftPropertyVideoControl').click(function () {
+        if (mediaVideo2.paused) {
+            mediaVideo2.play();
+            this.classList.add("pause");
+        } else {
+            mediaVideo2.pause();
+            this.classList.remove("pause");
+        }
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -173,11 +185,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 link.classList.add("active");
             }
         });
-    });
-
-
-    Barba.Dispatcher.on('newPageReady', function (current, container) {
-        history.scrollRestoration = 'manual';
     });
 
 

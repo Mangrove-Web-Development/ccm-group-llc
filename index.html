@@ -97,7 +97,18 @@ partners:
         {% for fp1 in site.properties %}
         {% if fp1.slug == page.first_featured_property %}
         <div class="property ft-properties__property--ft col-1-to-13 m-col-1-to-9 s-col-1-to-5">
+            {% if fp1.featured_video_path != "" %}
+            <div class="video-wrapper">
+                <button id="ftPropertyVideoControl" class="pause video-control" aria-label="Pause and Play Video. Ambient, no audio.">
+                </button>
+                <video id="ftPropertyVideo" preload="auto" autoplay="" aria-hidden="true" poster="{{ fp1.featured_video_poster_image}}" loop="" width="1280">
+                    <source src="{{ fp1.featured_video_path }}" type="video/mp4" />
+                    <p>{{ fp1.featured_video_description }}</p>
+                </video>
+            </div>
+            {% else %}
             <img src="{{ fp1.featured_image }}" alt="{{ fp1.featured_image_alt }}" />
+            {% endif %}
             <h3 class="h4">
                 {{ fp1.title }}
             </h3>

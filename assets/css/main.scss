@@ -275,7 +275,7 @@ p.small {
 
 .h1 {
     font-family: $tiempos;
-    font-size: 820%;
+    font-size: clamp(470%, 6vw, 1100%);
     line-height: 96%;
     color: $purple;
 }
@@ -414,28 +414,34 @@ iframe {
     }
 }
 
-.video-control {
-    height: 44px;
-    width: 44px;
-    position: absolute;
-    border-radius: 100px;
-    border: none;
-    background-color: white;
-    bottom: 30px;
-    transition: all .4s cubic-bezier(0.65, 0, 0.35, 1);
-    left: 30px;
-    background-image: url('/../assets/_images/play-icon.png');
-    cursor: pointer;
-    z-index: 1;
+.video-wrapper {
+    position: relative;
 
-    &.pause {
-        background-image: url('/../assets/_images/pause-icon.png');
-    }
-
-    &:hover {
-        transform: scale(1.05);
+    .video-control {
+        height: 44px;
+        width: 44px;
+        position: absolute;
+        border-radius: 100px;
+        border: none;
+        background-color: white;
+        bottom: 30px;
+        transition: all .4s cubic-bezier(0.65, 0, 0.35, 1);
+        left: 30px;
+        background-image: url('/../assets/_images/play-icon.png');
+        cursor: pointer;
+        z-index: 1;
+    
+        &.pause {
+            background-image: url('/../assets/_images/pause-icon.png');
+        }
+    
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
+
+
 
 
 
@@ -632,6 +638,7 @@ iframe {
         }
     }
 
+    .video-wrapper,
     img {
         grid-area: image;
         width: 100%;
