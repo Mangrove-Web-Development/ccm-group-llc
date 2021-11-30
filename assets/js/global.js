@@ -132,8 +132,8 @@ function cursorFollower() {
         el: $('#circle'),
         x: window.innerWidth / 2,
         y: window.innerHeight / 2,
-        w: 60,
-        h: 60,
+        w: 80,
+        h: 80,
         update: function () {
             l = this.x - this.w / 2;
             t = this.y - this.h / 2;
