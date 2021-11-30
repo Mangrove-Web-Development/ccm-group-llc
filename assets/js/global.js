@@ -163,15 +163,15 @@ function cursorFollower() {
     // hover 
     function hoverFunc() {
         gsap.to(circle.el, 0.3, {
-            height: "80px",
-            width: "80px"
+            height: "110px",
+            width: "110px"
         });
     }
 
     function unhoverFunc() {
         gsap.to(circle.el, 0.3, {
-            height: "60px",
-            width: "60px",
+            height: "80px",
+            width: "80px",
             opacity: "1"
         });
     }
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         } else {
             cursorFollower();
         }
-        
+
         window.scrollTo({top: 0});
 
         $('#navToggle').attr('aria-expanded', 'false');
