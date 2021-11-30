@@ -121,6 +121,76 @@ function toggleNav() {
     $('.main-header__nav >div >ul >li:first-child > a').focus();
 }
 
+// ——————————————————————————————————————————————————
+// cursor follower
+// ——————————————————————————————————————————————————
+function cursorFollower() {
+    var mouseX = window.innerWidth / 2,
+        mouseY = window.innerHeight / 2;
+
+    var circle = {
+        el: $('#circle'),
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
+        w: 60,
+        h: 60,
+        update: function () {
+            l = this.x - this.w / 2;
+            t = this.y - this.h / 2;
+            this.el.css({
+                'transform':
+                    'translate3d(' + l + 'px,' + t + 'px, 0)'
+            });
+        }
+    }
+
+    $(window).mousemove(function (e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    })
+
+    setInterval(move, 1000 / 60)
+    function move() {
+        circle.x = lerp(circle.x, mouseX, 0.1);
+        circle.y = lerp(circle.y, mouseY, 0.1);
+        circle.update()
+    }
+
+    function lerp(start, end, amt) {
+        return (1 - amt) * start + amt * end
+    }
+
+    // hover 
+    function hoverFunc() {
+        gsap.to(circle.el, 0.3, {
+            height: "80px",
+            width: "80px"
+        });
+    }
+
+    function unhoverFunc() {
+        gsap.to(circle.el, 0.3, {
+            height: "60px",
+            width: "60px",
+            opacity: "1"
+        });
+    }
+
+    function hideFunc() {
+        gsap.to(circle.el, 0.3, {
+            height: "0",
+            width: "0",
+            opacity: "0"
+        });
+    }
+
+    $("button").hover(hoverFunc, unhoverFunc);
+    $("a img").hover(hoverFunc, unhoverFunc);
+    $("a.link").hover(hoverFunc, unhoverFunc);
+    $("a.button").hover(hoverFunc, unhoverFunc);
+    $('.main-header__nav').hover(hideFunc, unhoverFunc);
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
 
     barba.init({
@@ -130,9 +200,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 once() {
                     gsap.fromTo(
                         document.getElementById('bodyID'), {
-                            ease: Power4.easeInOut,
-                            opacity: 0,
-                        },
+                        ease: Power4.easeInOut,
+                        opacity: 0,
+                    },
                         {
                             delay: 1,
                             opacity: 1,
@@ -153,9 +223,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 },
                 enter(data) {
                     return gsap.fromTo(data.next.container, {
-                            ease: Power4.easeInOut,
-                            opacity: 0,
-                        },
+                        ease: Power4.easeInOut,
+                        opacity: 0,
+                    },
                         {
                             delay: 1,
                             opacity: 1,
@@ -174,6 +244,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
     barba.hooks.beforeOnce(() => {
+        if (is_touch_device()) {
+
+        } else {
+            cursorFollower();
+        }
+
         // bio read more 
         if ($('.team__container__team-member button') != "") {
             $('.team__container__team-member button').click(function () {
@@ -191,6 +267,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
     barba.hooks.enter((data) => {
+        window.scrollTo({top: 0});
+
         $('#navToggle').attr('aria-expanded', 'false');
         document.querySelector('.main-header__nav > ul').classList.remove('is-active');
 
@@ -200,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 $(this).next().addClass("visible");
                 $(this).hide();
             });
-        }
+        } else {}
 
         // —————————————————————————————————————————
         // U P D A T E   N A V - A C T I V E

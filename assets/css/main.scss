@@ -117,14 +117,22 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
     left: 20px;
     border-radius: 0px 0px 5px 5px;
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
-    transition: .4s all $easing;
+    transition: .3s all $easing;
 
     &:focus {
         top: 0;
     }
 }
 
-
+#circle {
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;  
+    border: 1px solid $blue;
+    z-index: 123456789;
+    pointer-events: none
+}
 
 // ————————————————————————————————————————— 
 // core styles & classes
@@ -144,6 +152,7 @@ checkbox,
 
 body {
     background-color: $ccmwhite;
+    overflow: hidden;
 }
 
 .pv {
@@ -787,7 +796,7 @@ iframe {
         width: calc(33% - 30px);
         margin-right: 30px;
         margin-bottom: 60px;
-        
+
         img {
             height: clamp(350px, 30vw, 600px);
             object-fit: cover;
