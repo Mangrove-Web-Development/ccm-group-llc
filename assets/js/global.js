@@ -203,16 +203,28 @@ function cursorFollower() {
     if ($('.main-header__nav') != "") {
         $('.main-header__nav').hover(hideFunc, unhoverFunc);
     } else {}
-    
-    
-    
-    
-    
-    
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
+// ——————————————————————————————————————————————————
+// smoothscroll
+// https://idiotwu.github.io/smooth-scrollbar/
+// ——————————————————————————————————————————————————
+function smoothscroll() {
+    var Scrollbar = window.Scrollbar;
+    var scrollWrapper = document.querySelector('#scrollWrapper');
+    var scrollbar = Scrollbar.init(scrollWrapper, { damping: 0.1 });
+    scrollbar;
+    
+    $('#scrollWrapper').css({
+        'transform': 'auto',
+        'width': '100vw',
+        'height': '100vh'
+    });
+}
 
+
+
+document.addEventListener("DOMContentLoaded", function (event) {
     barba.init({
         transitions: [
             {
@@ -268,6 +280,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         } else {
             cursorFollower();
+            smoothscroll();            
         }
 
         // bio read more 
@@ -291,9 +304,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         } else {
             cursorFollower();
+            // scroll to top of page
+            var Scrollbar = window.Scrollbar;
+            var scrollWrapper = document.querySelector('#scrollWrapper');
+            var scrollbar = Scrollbar.init(scrollWrapper, { damping: 0.1 });
+            scrollbar.scrollTo(0, 0, 0);
         }
 
-        window.scrollTo({top: 0});
 
         $('#navToggle').attr('aria-expanded', 'false');
         document.querySelector('.main-header__nav > ul').classList.remove('is-active');

@@ -41,6 +41,7 @@
 	    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous">
     </script>
+    <script src="/assets/js/smoothscroll.js"></script>
     <script src="/assets/js/global.js"></script>
     
     <!-- css -->
@@ -60,31 +61,32 @@
     <a id="skipLink" href="#skipNavigation">Skip Navigation</a>
     <div id="circle"></div>
     
-    <header id="mainHeader" class="main-header wo">
-        <div class="main-header__logo-area col-1-to-4 m-col-1-to-3 s-col-1-to-5">
-            <a href="/">
-                <img src="/assets/_images/ccm-logo.svg" alt="CCM Group LLC Logo" />
-            </a>
-        </div>
-        <nav id="mainNav" class="main-header__nav col-4-to-13 m-col-3-to-9 s-col-1-to-5">  
-            <button id="navToggle" class="nav-toggle strip" aria-expanded="false" aria-controls="mainNav">
-                <img class="nav-toggle__open" src="{{ site.url }}/assets/_images/mobile-nav-open.svg" alt="Open Navigation">
-                <img class="nav-toggle__close" src="{{ site.url }}/assets/_images/mobile-nav-close.svg" alt="Close Navigation">
-            </button>
-            <ul>  
-            {% for navItem in site.data.navigation %}
-                <li {% if navItem.submenu != null %}class="main-header__nav__has-children" aria-haspopup="true" aria-expanded="false"{% endif %}>
-                    <a class="main-header__nav__link{% if pagePermalink == navItem.url %} active{% endif %}" href="{{ navItem.url }}">{{ navItem.title }}</a>
-                    {% if navItem.submenu != null %}
-                    <ul>
-                        {% for subItem in navItem.submenu %}
-                        <li><a class="main-header__nav__link{% if page.url == subItem.url %} active{% endif %}" href="{{ subItem.url }}">{{ subItem.title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </li>
-            {% endfor %}
-            </ul>
-        </nav>
-    </header>
-    <div id="skipNavigation"></div>
+    <div id="scrollWrapper">
+        <header id="mainHeader" class="main-header wo">
+            <div class="main-header__logo-area col-1-to-4 m-col-1-to-3 s-col-1-to-5">
+                <a href="/">
+                    <img src="/assets/_images/ccm-logo.svg" alt="CCM Group LLC Logo" />
+                </a>
+            </div>
+            <nav id="mainNav" class="main-header__nav col-4-to-13 m-col-3-to-9 s-col-1-to-5">  
+                <button id="navToggle" class="nav-toggle strip" aria-expanded="false" aria-controls="mainNav">
+                    <img class="nav-toggle__open" src="{{ site.url }}/assets/_images/mobile-nav-open.svg" alt="Open Navigation">
+                    <img class="nav-toggle__close" src="{{ site.url }}/assets/_images/mobile-nav-close.svg" alt="Close Navigation">
+                </button>
+                <ul>  
+                {% for navItem in site.data.navigation %}
+                    <li {% if navItem.submenu != null %}class="main-header__nav__has-children" aria-haspopup="true" aria-expanded="false"{% endif %}>
+                        <a class="main-header__nav__link{% if pagePermalink == navItem.url %} active{% endif %}" href="{{ navItem.url }}">{{ navItem.title }}</a>
+                        {% if navItem.submenu != null %}
+                        <ul>
+                            {% for subItem in navItem.submenu %}
+                            <li><a class="main-header__nav__link{% if page.url == subItem.url %} active{% endif %}" href="{{ subItem.url }}">{{ subItem.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            </nav>
+        </header>
+        <div id="skipNavigation"></div>
