@@ -41,7 +41,7 @@ partners:
         <div class="home-hero__video video-wrapper col-1-to-13 m-col-1-to-9 s-col-1-to-5">
             <button id="videoControl" class="pause video-control" aria-label="Pause and Play Video. Ambient, no audio.">
             </button>
-            <video id="heroVideo" preload="auto" autoplay="" aria-hidden="true" poster="{{ page.hero_video_poster_image}}" loop="" width="1280">
+            <video id="heroVideo" preload="auto" poster="{{ page.hero_video_poster_image}}" loop="" width="1280">
                 <source src="{{ page.hero_video_path }}" type="video/mp4" />
                 <p>{{ page.hero_video_description }}</p>
             </video>
@@ -101,7 +101,7 @@ partners:
             <div class="video-wrapper">
                 <button id="ftPropertyVideoControl" class="pause video-control" aria-label="Pause and Play Video. Ambient, no audio.">
                 </button>
-                <video id="ftPropertyVideo" preload="auto" autoplay="" aria-hidden="true" poster="{{ fp1.featured_video_poster_image}}" loop="" width="1280">
+                <video id="ftPropertyVideo" preload="auto" poster="{{ fp1.featured_video_poster_image}}" loop="" width="1280">
                     <source src="{{ fp1.featured_video_path }}" type="video/mp4" />
                     <p>{{ fp1.featured_video_description }}</p>
                 </video>

@@ -136,6 +136,12 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
     mix-blend-mode: overlay;
 }
 
+@media (prefers-reduced-motion) { 
+    #circle {
+        display: none;
+    }
+}
+
 // ————————————————————————————————————————— 
 // core styles & classes
 // ————————————————————————————————————————— 

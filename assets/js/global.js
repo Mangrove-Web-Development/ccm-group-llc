@@ -101,6 +101,14 @@ function videoControl() {
             this.classList.remove("pause");
         }
     });
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!mediaQuery || mediaQuery.matches) {
+
+    } else {
+        mediaVideo.setAttribute('autoplay','');
+        mediaVideo2.setAttribute('autoplay','');
+    }
 }
 
 // ——————————————————————————————————————————————————
