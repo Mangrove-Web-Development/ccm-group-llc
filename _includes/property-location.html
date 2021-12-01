@@ -1,11 +1,11 @@
 <section class="map-text wo pv-lg">
-    <div class="general-content col-2-to-6">
+    <div class="general-content col-2-to-6 m-col-1-to-5 s-col-1-to-5">
         <h2>{{ include.block.location_heading }}</h2>
         <p class="p-lg">
             {{ include.block.location_text }}
         </p>
     </div>
-    <div class="map-text__map col-7-to-12">
+    <div class="map-text__map col-7-to-12 m-col-5-to-9 s-col-1-to-5">
         {% assign longVAR =  include.block.longitude %}
         {% assign latVAR =  include.block.latitude %}
         {% include google-map.html latitude=latVAR longitude=longVAR zoom=10 %}

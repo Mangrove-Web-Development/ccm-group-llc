@@ -686,7 +686,7 @@ iframe {
 
 .cta {
     img {
-        height: clamp(300px, 75vh, 600px);
+        height: clamp(300px, 75vh, 700px);
         width: 100%;
         object-fit: cover;
     }
@@ -760,7 +760,7 @@ iframe {
         .ft-partners__partner__ft-image {
             grid-area: image;
             margin-bottom: 30px;
-            height: clamp(300px, 30vw, 600px);
+            height: clamp(300px, 75vh, 700px);
             width: 100%;
             object-fit: cover;
         }
@@ -861,7 +861,7 @@ iframe {
     position: relative;
 
     >img {
-        height: clamp(300px, 50vh, 650px);
+        height: clamp(300px, 75vh, 700px);
         width: 100%;
         object-fit: cover;
     }
@@ -873,14 +873,14 @@ iframe {
         padding: 60px;
         position: absolute;
         right: -20px;
-        height: clamp(450px, 65vh, 800px);
+        height: clamp(450px, 90vh, 800px);
 
         &:before {
             content: '';
             display: block;
             position: absolute;
             background: $blue;
-            height: clamp(250px, 40vh, 600px);
+            height: clamp(250px, 60vh, 600px);
             width: 10px;
             left: -10px;
             top: 50%;
@@ -948,7 +948,7 @@ iframe {
         }
 
         .history-entry__image img {
-            height: clamp(300px, 47vh, 500px);
+            height: clamp(300px, 55vh, 500px);
             width: 100%;
             object-fit: cover;
         }
