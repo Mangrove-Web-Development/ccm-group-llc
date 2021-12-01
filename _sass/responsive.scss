@@ -281,6 +281,16 @@
 	.partners .partners__logos {
 		margin-top: 30px;
 	}
+
+	.history {
+		.history-entry.history-entry--left .history-entry__image {
+			margin-right: -60px;
+		}
+
+		.history-entry.history-entry--right .history-entry__image {
+			margin-left: -60px;
+		}
+	}
 }
 
 @media only screen and (max-width: 700px) {
