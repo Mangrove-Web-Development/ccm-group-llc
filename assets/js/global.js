@@ -212,7 +212,7 @@ function cursorFollower() {
 function smoothscroll() {
     var Scrollbar = window.Scrollbar;
     var scrollWrapper = document.querySelector('#scrollWrapper');
-    var scrollbar = Scrollbar.init(scrollWrapper, { damping: 0.1 });
+    var scrollbar = Scrollbar.init(scrollWrapper, { damping: 0.09 });
     scrollbar;
     
     $('#scrollWrapper').css({
@@ -276,11 +276,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
     barba.hooks.beforeOnce(() => {
-        if (is_touch_device()) {
-
+        const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (!mediaQuery || mediaQuery.matches) {
+            // don't do the animations.
         } else {
-            cursorFollower();
-            smoothscroll();            
+            if (is_touch_device()) {
+
+            } else {
+                cursorFollower();
+                smoothscroll();            
+            }
         }
 
         // bio read more 
@@ -300,17 +305,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
     barba.hooks.enter((data) => {
-        if (is_touch_device()) {
-
+        const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (!mediaQuery || mediaQuery.matches) {
+            // don't do the animations.
         } else {
-            cursorFollower();
-            // scroll to top of page
-            var Scrollbar = window.Scrollbar;
-            var scrollWrapper = document.querySelector('#scrollWrapper');
-            var scrollbar = Scrollbar.init(scrollWrapper, { damping: 0.1 });
-            scrollbar.scrollTo(0, 0, 0);
-        }
+            if (is_touch_device()) {
 
+            } else {
+                cursorFollower();
+                // scroll to top of page
+                var Scrollbar = window.Scrollbar;
+                var scrollWrapper = document.querySelector('#scrollWrapper');
+                var scrollbar = Scrollbar.init(scrollWrapper, { damping: 0.09 });
+                scrollbar.scrollTo(0, 0, 0);
+            }
+        }
 
         $('#navToggle').attr('aria-expanded', 'false');
         document.querySelector('.main-header__nav > ul').classList.remove('is-active');
@@ -342,12 +351,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             } else if (link.attributes.href.nodeValue == currentParentPage) {
                 link.classList.add("active");
             }
-        });
-
-        // scroll to the top of the page 
-        gsap.to(window, {
-            duration: 0,
-            scrollTo: 0
         });
     });
 
