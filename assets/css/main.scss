@@ -238,6 +238,7 @@ address,
     font-size: 170%;
     font-family: $sohneRegular;
     line-height: 160%;
+    transform: rotate(-0.1deg);
 }
 
 small {
@@ -256,6 +257,7 @@ p.p-lg,
     font-size: 200%;
     font-family: $sohneRegular;
     line-height: 150%;
+    transform: rotate(-0.1deg);
 }
 
 li a,
@@ -294,6 +296,7 @@ p.small {
     font-size: clamp(470%, 6vw, 1100%);
     line-height: 96%;
     color: $purple;
+    transform: rotate(-0.1deg);
 }
 
 .general-content h2,
@@ -304,6 +307,7 @@ p.small {
     color: $blue;
     margin-top: 40px;
     margin-bottom: 10px;
+    transform: rotate(-0.1deg);
 }
 
 .general-content h3,
@@ -312,6 +316,7 @@ p.small {
     font-size: 300%;
     margin-bottom: 10px;
     margin-top: 40px;
+    transform: rotate(-0.1deg);
 }
 
 .general-content h4,
@@ -321,6 +326,7 @@ p.small {
     line-height: 120%;
     margin-top: 25px;
     margin-bottom: 5px;
+    transform: rotate(-0.1deg);
 }
 
 dt,
@@ -331,6 +337,7 @@ dt,
     font-family: $sohneBold;
     font-size: 200%;
     line-height: 150%;
+    transform: rotate(-0.1deg);
 }
 
 // ————————————————————————————— lists
