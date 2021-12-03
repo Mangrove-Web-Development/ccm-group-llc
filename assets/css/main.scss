@@ -256,7 +256,7 @@ p.p-lg,
 .p-lg p {
     font-size: 200%;
     font-family: $sohneRegular;
-    line-height: 150%;
+    line-height: 170%;
     transform: rotate(-0.1deg);
 }
 
@@ -317,13 +317,14 @@ p.small {
     margin-bottom: 10px;
     margin-top: 40px;
     transform: rotate(-0.1deg);
+    line-height: 130%;
 }
 
 .general-content h4,
 .h4 {
     font-family: $sohneBold;
     font-size: 220%;
-    line-height: 120%;
+    line-height: 130%;
     margin-top: 25px;
     margin-bottom: 5px;
     transform: rotate(-0.1deg);
