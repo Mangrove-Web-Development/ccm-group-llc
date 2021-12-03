@@ -106,8 +106,8 @@ function videoControl() {
     if (!mediaQuery || mediaQuery.matches) {
 
     } else {
-        mediaVideo.setAttribute('autoplay','');
-        mediaVideo2.setAttribute('autoplay','');
+        mediaVideo.setAttribute('autoplay', '');
+        mediaVideo2.setAttribute('autoplay', '');
     }
 }
 
@@ -194,23 +194,23 @@ function cursorFollower() {
 
     if ($("button") != "") {
         $("button").hover(hoverFunc, unhoverFunc);
-    } else {}
+    } else { }
 
     if ($("a img") != "") {
         $("a img").hover(hoverFunc, unhoverFunc);
-    } else {}
+    } else { }
 
     if ($("a.link") != "") {
         $("a.link").hover(hoverFunc, unhoverFunc);
-    } else {}
+    } else { }
 
     if ($("a.button") != "") {
         $("a.button").hover(hoverFunc, unhoverFunc);
-    } else {}
+    } else { }
 
     if ($('.main-header__nav') != "") {
         $('.main-header__nav').hover(hideFunc, unhoverFunc);
-    } else {}
+    } else { }
 }
 
 // ——————————————————————————————————————————————————
@@ -222,13 +222,14 @@ function smoothscroll() {
     var scrollWrapper = document.querySelector('#scrollWrapper');
     var scrollbar = Scrollbar.init(scrollWrapper, { damping: 0.09 });
     scrollbar;
-    
+
     $('#scrollWrapper').css({
         'transform': 'auto',
         'width': '100vw',
         'height': '100vh'
     });
 }
+
 
 
 
@@ -292,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             } else {
                 cursorFollower();
-                smoothscroll();            
+                smoothscroll();
             }
         }
 
@@ -338,7 +339,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 $(this).next().addClass("visible");
                 $(this).hide();
             });
-        } else {}
+        } else { }
 
         // —————————————————————————————————————————
         // U P D A T E   N A V - A C T I V E
