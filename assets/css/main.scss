@@ -416,11 +416,11 @@ iframe {
     line-height: 1;
     position: relative;
     border: none;
-    transition: .2s all $easing;
+    transition: .25s all $easing;
     overflow: hidden;
 
     &:hover {
-        background-color: $magenta; 
+        background-color: $blue; 
 
         span {
           position: absolute;
@@ -431,7 +431,7 @@ iframe {
             left: 0;
             width: 100%;
             height: 3px;
-            background: $blue;
+            background: $pink;
             animation: animate1 2s linear infinite;
           }
           @keyframes animate1 {
@@ -449,7 +449,7 @@ iframe {
             right: 0;
             width: 3px;
             height: 100%;
-            background: $blue;
+            background: $pink;
             animation: animate2 2s linear infinite;
             animation-delay: 0.5s;
           }
@@ -468,7 +468,7 @@ iframe {
             right: 0;
             width: 100%;
     
-            background: $blue;
+            background: $pink;
             animation: animate3 2s linear infinite;
             animation-delay: 1s;
           }
@@ -489,7 +489,7 @@ iframe {
             left: 0;
             width: 3px;
             height: 100%;
-            background: $blue;
+            background: $pink;
             animation: animate4 2s linear infinite;
             animation-delay: 1.5s;
           }
@@ -1109,6 +1109,14 @@ iframe {
 
     .h5 {
         padding: 0;
+    }
+
+    .main-footer__nav a {
+        transition: .2s all $easing;
+
+        &:hover {
+            opacity: 0.5;
+        }
     }
 
     span {
