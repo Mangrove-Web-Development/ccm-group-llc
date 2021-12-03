@@ -18,19 +18,25 @@ permalink: /contact/
     <main>
         
         <section class="wo pv-small">
-            <h2 class="h2 editable col-2-to-11 m-col-2-to-7 s-col-1-to-5">
-                CCM Group
-            </h2>
-            <div class="editable p-lg col-2-to-6 m-col-2-to-7 s-col-1-to-5">
-                <p>1730 Massachusetts Ave. NW<br />Washington, DC 20036<br /><a href="mailto:info@ccmgroupllc.com">info@ccmgroupllc.com</a><br />202-315-2400</p>
+            <div class="col-2-to-6 m-col-2-to-5 s-col-1-to-5">
+                <h2 class="h2 editable">
+                    CCM Group
+                </h2>
+                <div class="editable p-lg">
+                    <p>1730 Massachusetts Ave. NW<br />Washington, DC 20036<br /><a href="mailto:info@ccmgroupllc.com">info@ccmgroupllc.com</a><br />202-315-2400</p>
+                </div>
             </div>
 
-            <div class="editable p-lg col-7-to-11 m-col-2-to-7 s-col-1-to-5">
-                
+            <div class="contact-map col-6-to-12 m-col-5-to-8 s-col-1-to-5">
+                {% assign longVAR =  -77.03993645733048 %}
+                {% assign latVAR =  38.90838428568477 %}
+                {% include google-map.html latitude=latVAR longitude=longVAR zoom=15 %}
             </div>
         </section>
 
-        {% include /blocks/full-w-image.html %}
+        <section class="full-w-image wo pv">
+            <img class="editable col-1-to-13 m-col-1-to-9 s-col-1-to-5" src="/uploads/riverlights-51.jpg" alt="Alt text.">
+        </section>
     </main>
 </div>
 

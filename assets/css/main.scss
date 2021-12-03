@@ -927,7 +927,13 @@ iframe {
     #map {
         width: 100% !important;
         height: clamp(300px, 70vh, 1000px) !important;
-        display: block;
+    }
+}
+
+.contact-map {
+    #map {
+        width: 100% !important;
+        height: clamp(300px, 70vh, 500px) !important;
     }
 }
 
