@@ -239,6 +239,7 @@ address,
     font-family: $sohneRegular;
     line-height: 160%;
     transform: rotate(-0.1deg);
+    direction: ltr;
 }
 
 small {
@@ -624,6 +625,7 @@ iframe {
         h3 {
             grid-area: num;
             align-self: center;
+            margin-left: 10px;
         }
 
         p {
