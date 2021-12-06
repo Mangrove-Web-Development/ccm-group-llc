@@ -27,6 +27,13 @@ _options:
 # CloudCannon Field Descriptions
 _comments:
 
+_select_data:
+  category: 
+    - "Mixed Use"
+    - "Residential"
+    - "Commercial"
+    - "Other"
+
 # Collections (Custom Post Types)
 collections:
   sections:
