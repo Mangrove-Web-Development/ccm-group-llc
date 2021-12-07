@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             initMap();
         });
 
-        barba.hooks.enter((data) => {
+        barba.hooks.after((data) => {
             const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
             if (!mediaQuery || mediaQuery.matches) {
                 // don't do the animations.
