@@ -234,6 +234,14 @@ function smoothscroll() {
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
+
+
+}); // end document.ready
+
+
+if (window.inEditorMode) {
+    // do not load barba
+} else {
     barba.init({
         transitions: [
             {
@@ -362,5 +370,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
         });
     });
-
-}); // end document.ready
+}
