@@ -5,6 +5,8 @@
       url: /about/values-principles
     - title: History
       url: /about/history
+    - title: Team
+      url: /about/team
 - title: Investment
   url: /investment
   submenu:
