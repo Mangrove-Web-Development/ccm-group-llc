@@ -315,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             $('#navToggle').click(function () {
                 toggleNav();
             });
+            
         });
 
         barba.hooks.enter((data) => {
