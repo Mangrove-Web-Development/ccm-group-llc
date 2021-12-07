@@ -230,6 +230,146 @@ function smoothscroll() {
     });
 }
 
+// —————————————————————————————————————————
+// G O O G L E   M A P
+// —————————————————————————————————————————
+function initMap() {
+    var myOptions = {
+        scrollwheel: false,
+        draggable: false,
+        panControl: false,
+        disableDefaultUI: true,
+        zoom: window.mapData.zoom,
+        maxZoom: window.mapData.zoom,
+        minZoom: window.mapData.zoom,
+        center: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [
+            {
+                "featureType": "poi",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "stylers": [
+                    {
+                        "saturation": -70
+                    },
+                    {
+                        "lightness": 37
+                    },
+                    {
+                        "gamma": 1.15
+                    }
+                ]
+            },
+            {
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "gamma": 0.26
+                    },
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "stylers": [
+                    {
+                        "lightness": 0
+                    },
+                    {
+                        "saturation": 0
+                    },
+                    {
+                        "hue": "#ffffff"
+                    },
+                    {
+                        "gamma": 0
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "lightness": 20
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "lightness": 50
+                    },
+                    {
+                        "saturation": 0
+                    },
+                    {
+                        "hue": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "lightness": -50
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "lightness": 20
+                    }
+                ]
+            }
+        ]
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), myOptions);
+
+    var marker = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(window.mapData.latitude, window.mapData.longitude)
+    });
+
+    google.maps.event.addDomListener(window, 'resize', function () {
+        map.setCenter(myOptions.center);
+    });
+}
 
 
 
@@ -315,7 +455,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             $('#navToggle').click(function () {
                 toggleNav();
             });
-            
+
+            initMap();
+
         });
 
         barba.hooks.enter((data) => {
@@ -334,14 +476,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     scrollbar.scrollTo(0, 0, 0);
                 }
             }
-
-            // —————————————————————————————————————————
-            // G O O G L E   M A P
-            // —————————————————————————————————————————
-            // load the Google Map API script
-            let script = document.createElement('script');
-            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB-f8eAfO4Eu6qw_BipqOV_L24YF6nHohk&callback=createMap';
-            next.container.appendChild(script);
 
             $('#navToggle').attr('aria-expanded', 'false');
             document.querySelector('.main-header__nav > ul').classList.remove('is-active');
@@ -374,6 +508,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     link.classList.add("active");
                 }
             });
+
+            initMap();
         });
     }
 
