@@ -335,6 +335,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 }
             }
 
+            // —————————————————————————————————————————
+            // G O O G L E   M A P
+            // —————————————————————————————————————————
+            // load the Google Map API script
+            let script = document.createElement('script');
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB-f8eAfO4Eu6qw_BipqOV_L24YF6nHohk&callback=createMap';
+            next.container.appendChild(script);
+
             $('#navToggle').attr('aria-expanded', 'false');
             document.querySelector('.main-header__nav > ul').classList.remove('is-active');
 
