@@ -3,10 +3,10 @@
   submenu:
     - title: Values and principles
       url: /about/values-principles
-    - title: History
-      url: /about/history
     - title: Team
       url: /about/team
+    - title: History
+      url: /about/history
 - title: Investment
   url: /investment
   submenu:
