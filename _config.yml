@@ -130,7 +130,7 @@ _array_structures:
               undo: true
               redo: true
               removeformat: true
-          value:
+        value:
           _id: image_sidebar # use file name w/ underscores
           image:
           image_alt_text:
