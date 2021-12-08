@@ -14,6 +14,7 @@
 					font-size: 100%;
 					line-height: 1;
 					z-index: 123456789;
+					perspective: 1000px;
 
 					a {
 						font-family: $sohneBold;
@@ -29,29 +30,54 @@
 					}
 
 					> ul {
-						display: none;
-						position: absolute;
 						z-index: 1234;
 						width: 215px;
-						background-color: white;
+						margin-top: 0;
+						//
+						position: absolute;
+						top: 100%;
 						left: 0;
-						padding: 16px;
-						margin-top: 20px;
+						perspective: 1000px;
 
-						&:before {
-							content: "";
-							border-top: 2px solid $blue;
-							border-left: 2px solid $blue;
-							width: 80px;
-							height: 80px;
-							display: block;
-							position: absolute;
-							top: -2px;
-							left: -2px;
+						// &:before {
+						// 	content: "";
+						// 	border-top: 2px solid $blue;
+						// 	border-left: 2px solid $blue;
+						// 	width: 80px;
+						// 	height: 80px;
+						// 	display: block;
+						// 	position: absolute;
+						// 	top: -2px;
+						// 	left: -2px;
+						// }
+
+						// submenu animation & style
+						// https://codepen.io/codypearce/pen/PdBXpj
+						@for $num from 1 through 8 {
+							.sub-item-#{$num} {
+								transform-origin: top center;
+								animation: slideDown 300ms ($num * 60ms) ease-in-out forwards;
+							}
 						}
 
+						@keyframes slideDown {
+							0% { 
+							  opacity: 0;
+							  transform: translateY(-60px);
+							}
+						  
+							100% {
+							  opacity: 1;
+							  transform: translateY(0);
+							}
+						  }
+						// end submenu animation & style
+
 						li {
-							padding-bottom: 13px;
+							padding: 16px;
+							display: none;
+							opacity: 0;
+							background-color: white;
 
 							a {
 								position: relative;
@@ -67,6 +93,7 @@
 									right: -16px;
 									top: 9px;
 									transition: all 0.2s $easing;
+									perspective: 1000px;
 								}
 
 								&:hover:after {
@@ -76,8 +103,8 @@
 						}
 					}
 
-					&:hover > ul,
-					&:focus-within > ul {
+					&:hover > ul li,
+					&:focus-within > ul li {
 						display: block;
 					}
 
