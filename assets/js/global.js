@@ -368,23 +368,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
-
-
-
-
-
-
-
-
-
-
-
     // —————————————————————————————————————————
     // G O O G L E  M A P S
     // —————————————————————————————————————————
     barba.hooks.beforeOnce((data) => {
         console.log("barba.hooks.beforeOnce");
         if (document.getElementById('map') != null) {
+
             var myOptions = {
                 scrollwheel: false,
                 draggable: false,
@@ -529,7 +519,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     barba.hooks.after((data) => {
         console.log("barba.hooks.after");
-        if (document.getElementById('map') != null) {
+        if (document.getElementById('map') != null) {            
             var myOptions = {
                 scrollwheel: false,
                 draggable: false,
@@ -671,5 +661,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
             console.log("nomap");
         }
     });
-
 }); // end DOMContentLoaded
