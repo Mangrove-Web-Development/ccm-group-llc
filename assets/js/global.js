@@ -236,6 +236,12 @@ function smoothscroll() {
 function initMap() {
     if (document.getElementById('map') != null) {
         var map; 
+        // defaults
+        window.mapData = {
+            "latitude": 0,
+            "longitude": 0,
+            "zoom": 12
+        };
 
         var myOptions = {
             scrollwheel: false,
