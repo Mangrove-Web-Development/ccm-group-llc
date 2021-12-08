@@ -1,34 +1,32 @@
 <footer id="mainFooter" class="main-footer wo-full">
-        <div class="main-footer__logo col-1-to-5 m-col-1-to-4 s-col-1-to-5">
-            <img class="editable" src="/assets/_images/ccm-logo-white.svg" alt="CCM Group LLC Logo" />
-        </div>
+    <div class="main-footer__logo col-1-to-5 m-col-1-to-4 s-col-1-to-5">
+        <img class="editable" src="/assets/_images/ccm-logo-white.svg" alt="CCM Group LLC Logo" />
+    </div>
 
-        <nav aria-label="Social Media" class="main-footer__nav col-8-to-10 m-col-4-to-6 s-col-1-to-5">
-        {% for footerNavItem in site.data.social_media %}
-            <a class="main-header__nav__link{% if pagePermalink == footerNavItem.url %} active{% endif %}" href="{{ navItem.url }}">
-                {{ footerNavItem.title }}
-            </a>
-        {% endfor %}
-        </nav>
+    <nav aria-label="Social Media" class="main-footer__nav col-8-to-10 m-col-4-to-6 s-col-1-to-5">
+    {% for footerNavItem in site.data.social_media %}
+        <a class="main-header__nav__link{% if pagePermalink == footerNavItem.url %} active{% endif %}" href="{{ navItem.url }}">
+            {{ footerNavItem.title }}
+        </a>
+    {% endfor %}
+    </nav>
 
-        <div class="main-footer__site-title col-10-to-13 m-col-6-to-9 s-col-1-to-5">
-            <p class="h5">{{ site.data.site_info.site-title }}</p>
-        </div>
+    <div class="main-footer__site-title col-10-to-13 m-col-6-to-9 s-col-1-to-5">
+        <p class="h5">{{ site.data.site_info.site-title }}</p>
+    </div>
 
-        <div class="main-footer__spacer"></div>
+    <div class="main-footer__spacer"></div>
 
-        <div class="main-footer__small col-1-to-8 m-col-1-to-4 s-col-1-to-5">
-            <small class="editable">© Copyright 2021 CCM Group LLC</small>  
-        </div>
+    <div class="main-footer__small col-1-to-8 m-col-1-to-4 s-col-1-to-5">
+        <small class="editable">© Copyright 2021 CCM Group LLC</small>  
+    </div>
 
-        <div class="main-footer__address col-10-to-13 m-col-6-to-9 s-col-1-to-5">
-            <address>{{ site.data.site_info.address-text }}</address>
-        </div>
-        
-        <span class="main-footer__stripe-4"></span>
-        <span class="main-footer__stripe-3"></span>
-        <span class="main-footer__stripe-2"></span>
-        <span class="main-footer__stripe-1"></span>
-    </footer>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key={{ site.google_maps_javascript_api_key }}"></script>
+    <div class="main-footer__address col-10-to-13 m-col-6-to-9 s-col-1-to-5">
+        <address>{{ site.data.site_info.address-text }}</address>
+    </div>
+    
+    <span class="main-footer__stripe-4"></span>
+    <span class="main-footer__stripe-3"></span>
+    <span class="main-footer__stripe-2"></span>
+    <span class="main-footer__stripe-1"></span>
+</footer>
