@@ -80,6 +80,31 @@ _array_structures:
   # —————————————————————————————————————
   # Page Blocks
   # —————————————————————————————————————
+  _inputs: 
+    general_content_html:
+      type: html
+      options:
+        blockquote: false
+        bold: true
+        format: p h2 h3 h4 h5 h6 address
+        italic: true
+        strike: true
+        subscript: true
+        superscript: true
+        underline: true 
+        bulletedlist: true
+        indent: false
+        numberedlist: true
+        outdent: false 
+        code: false
+        embed: true
+        horizontalrule: false
+        image: true
+        table: false
+        undo: true
+        redo: true
+        removeformat: true
+                
   page_blocks:
     style: 'modal'
     values:
@@ -91,30 +116,6 @@ _array_structures:
         value:
           _id: general_content # use file name w/ underscores
           general_content_html:
-          _inputs: 
-            general_content_html:
-              type: html
-              options:
-                blockquote: false
-                bold: true
-                format: p h2 h3 h4 h5 h6 address
-                italic: true
-                strike: true
-                subscript: true
-                superscript: true
-                underline: true 
-                bulletedlist: true
-                indent: false
-                numberedlist: true
-                outdent: false 
-                code: false
-                embed: true
-                horizontalrule: false
-                image: true
-                table: false
-                undo: true
-                redo: true
-                removeformat: true
       # ———
       # Full Width Map
       # ———
