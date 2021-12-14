@@ -887,6 +887,8 @@ iframe {
 }
 
 .partners {
+    align-items: center;
+  
     .partners__logos {
         display: flex;
         flex-wrap: wrap;
@@ -894,8 +896,8 @@ iframe {
         align-items: center;
 
         img {
-            height: clamp(80px, 10vw, 300px);
-            width: clamp(140px, 14vw, 300px);
+            height: clamp(80px,10vw,200px);
+            width: clamp(140px,14vw,250px);
             object-fit: contain;
             margin: 0 30px;
         }
