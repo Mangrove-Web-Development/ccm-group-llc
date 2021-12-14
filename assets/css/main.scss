@@ -896,8 +896,8 @@ iframe {
         align-items: center;
 
         img {
-            height: clamp(80px,10vw,200px);
-            width: clamp(140px,14vw,250px);
+            height: clamp(80px,10vw,150px);
+            width: clamp(140px,14vw,200px);
             object-fit: contain;
             margin: 0 30px;
         }
