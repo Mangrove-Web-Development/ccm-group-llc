@@ -237,6 +237,7 @@ _array_structures:
           heading:
           team_member:
             - name:
+              designations:
               job_title:
               bio_text:
               image:
