@@ -6,7 +6,10 @@
     {% for teamMember in include.block.team_member %}
         <div class="team__container__team-member">
             <img aria-hidden="true" src="{{ teamMember.image }}" alt="">
-            <h3 class="h4">{{ teamMember.name }}</h3>
+            <h3 class="h4">
+              {{ teamMember.name }}
+              <span>{{ teamMember.designations }}</span>
+            </h3>
             <h4 class="p">{{ teamMember.job_title }}</h4>
             <p>{{ teamMember.bio_text }}</p>
             {% if teamMember.read_more == true %}
