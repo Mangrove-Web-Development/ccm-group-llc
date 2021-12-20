@@ -236,10 +236,6 @@
 	.team .team__container__team-member:nth-child(3n) {
 		margin-right: 0;
 	}
-
-    .property-section h2.h3, .property-section .lg-p {
-        margin-bottom: 20px;
-    }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
@@ -527,14 +523,6 @@
 			font-size: 550%;
 			align-self: end;
 		}
-	}
-
-	.property-section .lg-p {
-		margin-bottom: 20px;
-	}
-
-	.property-section h2.h3 {
-		margin-bottom: 10px;
 	}
 
 	.property {
