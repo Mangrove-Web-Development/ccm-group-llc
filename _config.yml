@@ -97,8 +97,9 @@ _array_structures:
               format: p h2 h3 h4 h5 h6 address
               italic: true
               strike: true
-              subscript: true
-              superscript: true
+              hyperlink: true
+              subscript: false
+              superscript: false
               underline: true 
               bulletedlist: true
               indent: false
