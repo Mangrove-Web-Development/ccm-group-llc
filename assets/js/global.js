@@ -253,10 +253,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // don't do the animations.
     } else {
         if (is_touch_device()) {
-
+            videoControl()
         } else {
             cursorFollower();
             smoothscroll();
+            videoControl()
         }
     }
 
