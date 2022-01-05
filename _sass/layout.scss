@@ -83,7 +83,7 @@ img[class*="col-"] {
     .wo-full {
         display: grid;
         grid-template-columns: repeat($column-count-m, 1fr);
-        gap: 0 $column-margin + px;
+        gap: 10px $column-margin + px;
         justify-items: stretch;
         align-items: start;
     }
