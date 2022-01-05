@@ -230,6 +230,10 @@
 	body {
 		font-size: 55%;
 	}
+	
+	.p, a, address, li, p, small {
+	  font-size: 190%;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
