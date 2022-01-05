@@ -5,7 +5,7 @@
 
     <nav aria-label="Social Media" class="main-footer__nav col-8-to-10 m-col-4-to-6 s-col-1-to-5">
     {% for footerNavItem in site.data.social_media %}
-        <a class="main-header__nav__link{% if pagePermalink == footerNavItem.url %} active{% endif %}" href="{{ navItem.url }}">
+        <a class="main-header__nav__link{% if pagePermalink == footerNavItem.url %} active{% endif %}" href="{{ footerNavItem.url }}">
             {{ footerNavItem.title }}
         </a>
     {% endfor %}
