@@ -79,35 +79,42 @@ function is_touch_device() {
 // —————————————————————————————————————————————————————
 function videoControl() {
     var mediaVideo = $("#heroVideo").get(0);
-    // play/pause on video click
-    $('#videoControl').click(function () {
-        if (mediaVideo.paused) {
-            mediaVideo.play();
-            this.classList.add("pause");
-        } else {
-            mediaVideo.pause();
-            this.classList.remove("pause");
-        }
-    });
+
+    if (mediaVideo) {
+        // play/pause on video click
+        $('#videoControl').click(function () {
+            if (mediaVideo.paused) {
+                mediaVideo.play();
+                this.classList.add("pause");
+            } else {
+                mediaVideo.pause();
+                this.classList.remove("pause");
+            }
+        });
+    }
 
     var mediaVideo2 = $("#ftPropertyVideo").get(0);
-    // play/pause on video click
-    $('#ftPropertyVideoControl').click(function () {
-        if (mediaVideo2.paused) {
-            mediaVideo2.play();
-            this.classList.add("pause");
+    if (mediaVideo2) {
+        // play/pause on video click
+        $('#ftPropertyVideoControl').click(function () {
+            if (mediaVideo2.paused) {
+                mediaVideo2.play();
+                this.classList.add("pause");
+            } else {
+                mediaVideo2.pause();
+                this.classList.remove("pause");
+            }
+        });
+    }
+
+    if (mediaVideo2 && mediaVideo) {
+        const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (!mediaQuery || mediaQuery.matches) {
+
         } else {
-            mediaVideo2.pause();
-            this.classList.remove("pause");
+            mediaVideo.setAttribute('autoplay', '');
+            mediaVideo2.setAttribute('autoplay', '');
         }
-    });
-
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (!mediaQuery || mediaQuery.matches) {
-
-    } else {
-        mediaVideo.setAttribute('autoplay', '');
-        mediaVideo2.setAttribute('autoplay', '');
     }
 }
 
@@ -237,7 +244,7 @@ function targetBlankA11Y() {
     var targetBlankLinks = document.getElementsByTagName('a');
 
     for (a in targetBlankLinks) {
-        if(targetBlankLinks[a].target == '_blank') {
+        if (targetBlankLinks[a].target == '_blank') {
             var targetBlankLinksNode = document.createElement("span");
             var targetBlankLinksTextNode = document.createTextNode("(Opens a new window)");
             targetBlankLinksNode.appendChild(targetBlankLinksTextNode);
