@@ -230,6 +230,22 @@ function smoothscroll() {
     });
 }
 
+// ——————————————————————————————————————————————————
+// target links that open in a new tab, add A11Y elements
+// ——————————————————————————————————————————————————
+function targetBlankA11Y() {
+    var targetBlankLinks = document.getElementsByTagName('a');
+
+    for (a in targetBlankLinks) {
+        if(targetBlankLinks[a].target == '_blank') {
+            var targetBlankLinksNode = document.createElement("span");
+            var targetBlankLinksTextNode = document.createTextNode("(Opens a new window)");
+            targetBlankLinksNode.appendChild(targetBlankLinksTextNode);
+            targetBlankLinks[a].appendChild(targetBlankLinksNode);
+        }
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", function (event) {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -243,6 +259,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             smoothscroll();
         }
     }
+
+    targetBlankA11Y();
 
     // bio read more 
     if ($('.team__container__team-member button') != "") {
@@ -259,108 +277,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
         toggleNav();
     });
 
-    // if (window.inEditorMode) {
-    //     // do not load barba
-    // } else {
-    //     barba.init({
-    //         transitions: [
-    //             {
-    //                 name: 'once',
-    //                 once() {
-    //                     gsap.fromTo(
-    //                         document.getElementById('bodyID'), {
-    //                         ease: Power4.easeInOut,
-    //                         opacity: 0,
-    //                     },
-    //                         {
-    //                             delay: 1,
-    //                             opacity: 1,
-    //                             duration: .5,
-    //                         }
-    //                     );
-    //                 },
-    //             },
-    //             {
-    //                 name: 'default',
-    //                 leave(data) {
-    //                     return gsap.to(data.current.container, {
-    //                         ease: Power4.easeInOut,
-    //                         opacity: 0,
-    //                         display: "none",
-    //                         duration: .5,
-    //                     });
-    //                 },
-    //                 enter(data) {
-    //                     return gsap.fromTo(data.next.container, {
-    //                         ease: Power4.easeInOut,
-    //                         opacity: 0,
-    //                     },
-    //                         {
-    //                             delay: 1,
-    //                             opacity: 1,
-    //                             duration: .5,
-    //                         }
-    //                     );
-    //                 },
-    //             }
-    //         ],
-    //         views: [{
-    //             namespace: 'home',
-    //             beforeEnter() {
-    //                 videoControl();
-    //             }
-    //         }]
-    //     });
-
-        // barba.hooks.after((data) => {
-        //     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-        //     if (!mediaQuery || mediaQuery.matches) {
-        //         // don't do the animations.
-        //     } else {
-        //         if (is_touch_device()) {
-
-        //         } else {
-        //             cursorFollower();
-        //             // scroll to top of page
-        //             var Scrollbar = window.Scrollbar;
-        //             var scrollWrapper = document.querySelector('#scrollWrapper');
-        //             var scrollbar = Scrollbar.init(scrollWrapper, { damping: 0.09 });
-        //             scrollbar.scrollTo(0, 0, 0);
-        //         }
-        //     }
-
-        //     $('#navToggle').attr('aria-expanded', 'false');
-        //     document.querySelector('.main-header__nav > ul').classList.remove('is-active');
-
-        //     // bio read more 
-        //     if ($('.team__container__team-member button') != "") {
-        //         $('.team__container__team-member button').click(function () {
-        //             $(this).next().addClass("visible");
-        //             $(this).hide();
-        //         });
-        //     } else { }
-
-
-        //     // —————————————————————————————————————————
-        //     // U P D A T E   N A V - A C T I V E
-        //     // —————————————————————————————————————————
-        //     let nextItem = data.next.url.path;
-        //     let menu = document.querySelectorAll(".main-header__nav__link");
-        //     let currentPermalink = window.location.pathname;
-        //     let currentPermalinkSplit = currentPermalink.split("/");
-        //     let currentParentPage = "/" + currentPermalinkSplit[1] + "/";
-
-        //     // for each menu item, run the active class update function
-        //     menu.forEach((link) => {
-        //         // remove all active classes
-        //         link.classList.remove("active");
-        //         // add active class to the link
-        //         if (link.pathname == nextItem) {
-        //             link.classList.add("active");
-        //         } else if (link.attributes.href.nodeValue == currentParentPage) {
-        //             link.classList.add("active");
-        //         }
-        //     });
-        // });
-    // }
 }); // end DOMContentLoaded

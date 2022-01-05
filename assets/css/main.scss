@@ -143,6 +143,35 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 // ————————————————————————————————————————— 
+// A11Y links in new window styling
+// https://www.w3.org/WAI/WCAG21/Techniques/general/G201.html
+// ————————————————————————————————————————— 
+a[target=_blank] {
+    position: relative;
+
+    span {
+        position: absolute;
+        left: -9000px;
+        width: 0;
+        overflow: hidden;
+    }
+
+    &:hover span,
+    &:focus span,
+    &:active span {
+        display: block;
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        width: 12em;
+        border: 1px solid $blue;
+        background-color: $grey;
+        color: $blue;
+        text-align: center
+    }
+}
+
+// ————————————————————————————————————————— 
 // core styles & classes
 // ————————————————————————————————————————— 
 body,
