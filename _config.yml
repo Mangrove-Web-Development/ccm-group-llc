@@ -73,10 +73,10 @@ _array_structures:
         icon: location_on # fonts.google.com/icons
         value:
           _id: property_location # use file name w/ underscores
-          longitude:
           latitude:
+          longitude:
           location_heading:
-          location_text:
+          location_textarea:
   # —————————————————————————————————————
   # Page Blocks
   # —————————————————————————————————————
