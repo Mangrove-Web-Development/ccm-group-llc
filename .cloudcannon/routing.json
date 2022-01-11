@@ -8,6 +8,41 @@
             "from": "/about-ccm-group/(.*)",
             "to": "/about/(.*)",
             "status": 301
+        },
+        {
+            "from": "/about-ccm-group/values-mission-and-vision/",
+            "to": "/about/values-principles",
+            "status": 301
+        },
+        {
+            "from": "/ccm-real-estate/",
+            "to": "/divisions/ccm-real-estate",
+            "status": 301
+        },
+        {
+            "from": "/ccm-puerto-rico/",
+            "to": "/divisions/CCM-puerto-rico",
+            "status": 301
+        },
+        {
+            "from": "/contact-us/",
+            "to": "/contact",
+            "status": 301
+        },
+        {
+            "from": "/ccm-real-estate/investment-criteria/",
+            "to": "/investment/criteria",
+            "status": 301
+        },
+        {
+            "from": "/ccm-real-estate/sample-transactions/",
+            "to": "/investment/properties",
+            "status": 301
+        },
+        {
+            "from": "/ccm-real-estate/operating-partners/",
+            "to": "/investment/partners",
+            "status": 301
         }
     ]
 }
