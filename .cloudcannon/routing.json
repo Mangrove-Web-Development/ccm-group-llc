@@ -1,0 +1,13 @@
+{
+    "routes": [{
+            "from": "/about-ccm-group/",
+            "to": "/about",
+            "status": 301
+        },
+        {
+            "from": "/about-ccm-group/(.*)",
+            "to": "/about/(.*)",
+            "status": 301
+        }
+    ]
+}
