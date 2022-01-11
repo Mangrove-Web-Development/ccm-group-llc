@@ -24,15 +24,6 @@ try {
     window.attachEvent("onload", $buo_f)
 }
 
-
-
-// —————————————————————————————————————————————————————
-// add class to target users with js or no js
-// —————————————————————————————————————————————————————
-document.documentElement.classList.remove("no-js");
-document.documentElement.classList.add("js");
-
-
 // —————————————————————————————————————————————————————
 // is touch device
 // —————————————————————————————————————————————————————

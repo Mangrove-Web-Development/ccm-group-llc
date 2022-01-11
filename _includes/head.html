@@ -25,13 +25,9 @@
     <meta name="msapplication-TileColor" content="#9f00a7">
     <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#2e3192">
-
-    <!-- barba -->
-    <script src="https://unpkg.com/@barba/core@2.9.7/dist/barba.umd.js"></script>
-    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver"></script>
     
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- gsap 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>-->
 
     <!-- scripts -->
     <script
@@ -47,9 +43,8 @@
     <link rel="stylesheet" href="/assets/css/main.css">  
 
     <!-- font preload -->
-    <!-- <link rel="preload" href="__HARD_URL_HERE__" as="font" type="font/woff" crossorigin>-->
+    <link rel="preload" href="https://ccmgroupllc.com/assets/fonts/tiempos-headline-light.woff2" as="font" type="font/woff" crossorigin>-->
 
-    <!-- end wp head -->
 </head>
 
 {% assign pageURLsplit = page.url | split: '/' %}
@@ -68,8 +63,8 @@
             </div>
             <nav id="mainNav" class="main-header__nav col-4-to-13 m-col-3-to-9 s-col-1-to-5">  
                 <button id="navToggle" class="nav-toggle strip" aria-expanded="false" aria-controls="mainNav">
-                    <img class="nav-toggle__open" src="{{ site.url }}/assets/_images/mobile-nav-open.svg" alt="Open Navigation">
-                    <img class="nav-toggle__close" src="{{ site.url }}/assets/_images/mobile-nav-close.svg" alt="Close Navigation">
+                    <img class="nav-toggle__open" src="/assets/_images/mobile-nav-open.svg" alt="Open Navigation">
+                    <img class="nav-toggle__close" src="/assets/_images/mobile-nav-close.svg" alt="Close Navigation">
                 </button>
                 <ul>  
                 {% for navItem in site.data.navigation %}
