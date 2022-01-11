@@ -236,13 +236,6 @@ p .button {
 }
 
 
-
-// ————————————————————————————————————————— 
-// header
-// —————————————————————————————————————————
-
-#header {}
-
 // ————————————————————————————————————————— 
 // ST Typography
 // —————————————————————————————————————————
@@ -425,11 +418,6 @@ iframe {
     width: 100%;
 }
 
-
-// ————————————————————————————————————————— 
-// Special Typography
-// —————————————————————————————————————————
-
 // ————————————————————————————————————————— 
 // buttons
 // —————————————————————————————————————————
@@ -576,89 +564,6 @@ iframe {
     
         &:hover {
             transform: scale(1.05);
-        }
-    }
-}
-
-
-
-
-
-// ————————————————————————————————————————— 
-// contact form 7
-// —————————————————————————————————————————
-
-.form-layer {
-    padding: 0 20px 100px;
-    text-align: center;
-    background: white;
-
-    .form-layer__form {
-        p {
-            font-size: 100%;
-            margin-top: 25px;
-            display: block;
-            clear: both;
-        }
-
-        p {
-            font-size: 100%;
-            margin-top: 25px;
-            display: block;
-            clear: both;
-        }
-
-        p.three-field-date,
-        p.two-field-date {
-            font-size: 100%;
-            margin-top: 0;
-        }
-
-        label,
-        legend {
-            display: inline-block;
-            padding-bottom: 5px;
-            font-size: 180%;
-        }
-
-        legend {
-            margin-top: 25px;
-        }
-
-        input,
-        textarea,
-        checkbox,
-        radio {
-            box-sizing: border-box;
-            border: none;
-            margin: 0;
-            padding: 0;
-            width: 600px;
-            max-width: 100%;
-            font-size: 180%;
-            line-height: 1.2;
-            padding: 10px;
-        }
-
-        input[type="submit"] {
-            text-align: center;
-            font-size: 180%;
-            width: auto;
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: 3px solid #4985a7;
-            color: black;
-        }
-
-        select {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            box-sizing: border-box !important;
-            background: url('img/dropdown-arrow.png') no-repeat 96% 50% transparent;
-            background-size: 16px 9px;
         }
     }
 }
@@ -1132,9 +1037,6 @@ iframe {
         }
     }
 }
-
-
-
 
 
 // ————————————————————————————————————————— 
