@@ -327,11 +327,6 @@
 		}
 	}
 
-	.map-text .map-text__map #map {
-		width: 45vw !important;
-		height: 40vw !important;
-	}
-
 	.full-w-map p, .full-w-image p {
 		margin-top: 10px;
 	}
@@ -656,15 +651,6 @@
 	.ft-partners .ft-partners__partner p {
 		margin-top: 0;
 		margin-bottom: 50px;
-	}
-
-	.map-text .map-text__map {
-		margin-top: 30px;
-
-		#map {
-			width: calc(100vw - 40px) !important;
-			height: 70vw !important;
-		}
 	}
 
 	.full-w-map p, .full-w-image p {
