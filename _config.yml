@@ -51,33 +51,6 @@ collections:
 # Layers
 _array_structures:
   # —————————————————————————————————————
-  # Properties Blocks
-  # —————————————————————————————————————
-  property_blocks:
-    style: 'modal'
-    values:
-      # ———
-      # Full Width Image
-      # ———
-      - label: Full Width Image
-        icon: insert_photo # fonts.google.com/icons
-        value:
-          _id: full_w_image # use file name w/ underscores
-          image:
-          image_alt_text:
-          caption:
-      # ———
-      # Property Location
-      # ———
-      - label: Property Location
-        icon: location_on # fonts.google.com/icons
-        value:
-          _id: property_location # use file name w/ underscores
-          latitude:
-          longitude:
-          location_heading:
-          location_textarea:
-  # —————————————————————————————————————
   # Page Blocks
   # —————————————————————————————————————
   page_blocks:
