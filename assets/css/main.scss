@@ -939,8 +939,9 @@ iframe {
         dd {
             width: calc(50% - 10px);
             display: inline-block;
-            margin: 10px 0;
+            margin: 8px 0;
             padding: 0;
+            line-height: 1.2;
         }
 
         dt {
