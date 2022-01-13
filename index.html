@@ -104,7 +104,7 @@ partners:
             <div class="video-wrapper">
                 <button id="ftPropertyVideoControl" class="pause video-control" aria-label="Pause and Play Video. Ambient, no audio.">
                 </button>
-                <video id="ftPropertyVideo" preload="auto" poster="{{ fp1.featured_video_poster_image}}" loop="" width="1280">
+                <video id="ftPropertyVideo" preload="auto" poster="{{ fp1.featured_video_poster_image}}" loop="" muted="" width="1280">
                     <source src="{{ fp1.featured_video_path }}" type="video/mp4" />
                     <p>{{ fp1.featured_video_description }}</p>
                 </video>
