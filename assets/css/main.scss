@@ -960,6 +960,14 @@ iframe {
     }
 }
 
+.image-sidebar {
+  img {
+    height: 30vw;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 .full-w-map {
     #map {
         width: 100% !important;
