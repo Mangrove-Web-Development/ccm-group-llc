@@ -926,7 +926,8 @@ iframe {
         width: 460px;
         padding: 60px;
         position: absolute;
-        right: -20px;
+        //right: -20px; caused horizontal scroll 
+        right: 0px;
         height: clamp(450px, 90vh, 800px);
 
         &:before {
