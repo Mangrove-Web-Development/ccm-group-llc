@@ -129,6 +129,7 @@ function toggleNav() {
 
 // ——————————————————————————————————————————————————
 // cursor follower
+// this was removed from the site Feb 25, 2022
 // ——————————————————————————————————————————————————
 function cursorFollower() {
     var mouseX = window.innerWidth / 2,
@@ -253,7 +254,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (is_touch_device()) {
             videoControl();
         } else {
-            cursorFollower();
             smoothscroll();
             videoControl();
         }
