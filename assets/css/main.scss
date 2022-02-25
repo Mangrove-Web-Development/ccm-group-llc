@@ -125,22 +125,23 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
     }
 }
 
-#circle {
-    position: fixed;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;  
-    background-color: rgba(255, 255, 255, 0.4);
-    z-index: 123456789;
-    pointer-events: none;
-    mix-blend-mode: overlay;
-}
+// removed Feb 2022
+// #circle {
+//     position: fixed;
+//     height: 80px;
+//     width: 80px;
+//     border-radius: 50%;  
+//     background-color: rgba(255, 255, 255, 0.4);
+//     z-index: 123456789;
+//     pointer-events: none;
+//     mix-blend-mode: overlay;
+// }
 
-@media (prefers-reduced-motion) { 
-    #circle {
-        display: none;
-    }
-}
+// @media (prefers-reduced-motion) { 
+//     #circle {
+//         display: none;
+//     }
+// }
 
 // smoothscroll scrollbar - always show
 .scrollbar-track {
