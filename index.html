@@ -241,7 +241,7 @@ partners:
         </div>
         <div class="partners__logos col-7-to-13 m-col-2-to-8 s-col-1-to-5">
             {% for partner in page.partners %}
-            <a href="{{ partner.partner_logo_link }}"><img src="{{ partner.partner_logo_image }}" alt="{{ partner.partner_logo_alt }}" /></a>
+            <a href="{{ partner.partner_logo_link }}" rel="noopener noreferrer" target="_blank"><img src="{{ partner.partner_logo_image }}" alt="{{ partner.partner_logo_alt }}" /></a>
             {% endfor %}
         </div>
     </section>
