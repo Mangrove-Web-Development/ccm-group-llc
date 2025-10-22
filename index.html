@@ -4,7 +4,7 @@ hero_video_path: /uploads/video/25_seconds_M4V.mp4
 hero_video_poster_image: /uploads/01-cover-1.png
 hero_video_description: Aerial shots over cities.
 first_featured_property: winter-park-village
-second_featured_property: /investment/properties/hamlet-watkins-centre
+second_featured_property: Hamlet Watkins Centre
 third_featured_property: shoppes-at-battleground
 fourth_featured_property: ashton-creek
 partners:
@@ -36,6 +36,7 @@ partners:
 {% include head.html %}
 
 <main data-barba="container" data-barba-namespace="home">
+
     <section class="home-hero wo pv">
         <p class="editable p-lg col-1-to-9 m-col-1-to-7 s-col-1-to-5">
             As a trusted investment partner, we're as committed to generating exceptional returns from our real estate holdings as we are to having a positive philanthropic impact.
@@ -102,6 +103,8 @@ partners:
         <h2 class="h3 editable col-1-to-13 m-col-1-to-9 s-col-1-to-5">
             Featured holdings
         </h2>
+
+ 
         {% for fp1 in site.properties %}
         {% if fp1.slug == page.first_featured_property %}
         <div class="property ft-properties__property--ft col-1-to-13 m-col-1-to-9 s-col-1-to-5">
@@ -132,7 +135,7 @@ partners:
         {% endfor %}
 
         {% for fp2 in site.properties %}
-        {% if fp2.slug == page.second_featured_property %}
+        {% if fp2.title == page.second_featured_property %}
         <div class="property col-1-to-5 m-col-1-to-5 s-col-1-to-5">
             <img src="{{ fp2.featured_image }}" alt="{{ fp2.featured_image_alt }}" />
             <h3 class="h4">
@@ -263,6 +266,22 @@ partners:
             </a>
         </div>
     </section>
+
+  <div style="display:none;">
+  {% for p in site.properties %}
+    <!-- 
+    🔹 Property Debug
+    Title: {{ p.title | default: "(sin título)" }}
+    Slug: {{ p.slug | default: "(sin slug)" }}
+    Permalink: {{ p.permalink | default: "(sin permalink)" }}
+    URL: {{ p.url | default: "(sin url)" }}
+    Basename: {{ p.basename | default: "(sin basename)" }}
+    Path: {{ p.path }}
+    -----------------------------
+    -->
+  {% endfor %}
+</div>
+
 </main>
 
 {% include footer.html %}
