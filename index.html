@@ -4,7 +4,7 @@ hero_video_path: /uploads/video/25_seconds_M4V.mp4
 hero_video_poster_image: /uploads/01-cover-1.png
 hero_video_description: Aerial shots over cities.
 first_featured_property: winter-park-village
-second_featured_property: Hamlet Watkins Centre
+second_featured_property: hamlet-watkins-centre
 third_featured_property: shoppes-at-battleground
 fourth_featured_property: ashton-creek
 partners:
@@ -135,7 +135,7 @@ partners:
         {% endfor %}
 
         {% for fp2 in site.properties %}
-        {% if fp2.title == page.second_featured_property %}
+        {% if fp2.slug == page.second_featured_property %}
         <div class="property col-1-to-5 m-col-1-to-5 s-col-1-to-5">
             <img src="{{ fp2.featured_image }}" alt="{{ fp2.featured_image_alt }}" />
             <h3 class="h4">
